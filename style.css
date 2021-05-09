@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Rubik+Mono+One&display=swap');
+
+:root {
+  --bg-color: rgba(235,225,251, 1);
+  --text-color: rgba(113,0,182, 1);
+  --text-soft-color: rgba(133,0,213, 1);
+  --text-strong-color: rgba(113,0,182, 1);
+  --subtle-color: rgba(239,232,252, 1);
+  --border-color: rgba(191,161,233, 1);
+  --shadow-color: rgba(186,157,228, 1);
+  --input-color: rgba(255,255,255, 1);
+  --outline-color: rgba(3,187,190, 1);
+  --mark-color: rgba(0,83,85, 0.08);
+  --special-color: rgba(0,83,85, 1);
+  --special-bg-color: rgba(0,99,101, 1);
+  --special-text-color: rgba(255,255,255, 1);
+  --special-shadow-color: rgba(1,55,56, 1);
+  --special-mark-color: rgba(255,255,255, 0.08);
+  --light-color: rgba(201,253,255, 1);
+  --dark-color: rgba(2,79,81, 1);
+  --text-color-rgb: 113,0,182;
+  --bg-color-rgb: 235,225,251;
+  --subtle-color-rgb: 239,232,252;
+  --special-color-rgb: 0,83,85;
+  --special-text-color-rgb: 255,255,255;
+  --special-bg-color-rgb: 0,99,101;
+  --shadow-color-rgb: 186,157,228;
+  --special-shadow-color-rgb: 1,55,56;
+  --outline-color-rgb: 3,187,190;
+  --dark-color-rgb: 2,79,81;
+  --light-color-rgb: 201,253,255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: rgba(51,43,63, 1);
+    --text-color: rgba(204,174,246, 1);
+    --text-soft-color: rgba(190,150,243, 1);
+    --text-strong-color: rgba(204,174,246, 1);
+    --subtle-color: rgba(47,39,58, 1);
+    --border-color: rgba(99,83,123, 1);
+    --shadow-color: rgba(0,0,0, 1);
+    --input-color: rgba(32,32,32, 1);
+    --outline-color: rgba(3,159,162, 1);
+    --mark-color: rgba(3,208,212, 0.08);
+    --special-color: rgba(3,208,212, 1);
+    --special-bg-color: rgba(0,79,81, 1);
+    --special-text-color: rgba(197,229,230, 1);
+    --special-shadow-color: rgba(0,0,0, 1);
+    --special-mark-color: rgba(197,229,230, 0.08);
+    --light-color: rgba(4,235,239, 1);
+    --dark-color: rgba(1,59,61, 1);
+    --text-color-rgb: 204,174,246;
+    --bg-color-rgb: 51,43,63;
+    --subtle-color-rgb: 47,39,58;
+    --special-color-rgb: 3,208,212;
+    --special-text-color-rgb: 197,229,230;
+    --special-bg-color-rgb: 0,79,81;
+    --shadow-color-rgb: 0,0,0;
+    --special-shadow-color-rgb: 0,0,0;
+    --outline-color-rgb: 3,159,162;
+    --dark-color-rgb: 1,59,61;
+    --light-color-rgb: 4,235,239;
+  }
+}
+
+@media (prefers-color-scheme: light) and (prefers-contrast: more) {
+  :root {
+    --bg-color: rgba(235,225,251, 1);
+    --text-color: rgba(95,0,154, 1);
+    --text-soft-color: rgba(95,0,154, 1);
+    --text-strong-color: rgba(113,0,182, 1);
+    --subtle-color: rgba(239,232,252, 1);
+    --border-color: rgba(124,104,153, 1);
+    --shadow-color: rgba(151,127,186, 1);
+    --input-color: rgba(255,255,255, 1);
+    --outline-color: rgba(2,179,182, 1);
+    --mark-color: rgba(0,70,71, 0.16);
+    --special-color: rgba(0,70,71, 1);
+    --special-bg-color: rgba(0,85,87, 1);
+    --special-text-color: rgba(255,255,255, 1);
+    --special-shadow-color: rgba(0,0,0, 1);
+    --special-mark-color: rgba(255,255,255, 0.16);
+    --light-color: rgba(201,253,255, 1);
+    --dark-color: rgba(2,79,81, 1);
+    --text-color-rgb: 95,0,154;
+    --bg-color-rgb: 235,225,251;
+    --subtle-color-rgb: 239,232,252;
+    --special-color-rgb: 0,70,71;
+    --special-text-color-rgb: 255,255,255;
+    --special-bg-color-rgb: 0,85,87;
+    --shadow-color-rgb: 151,127,186;
+    --special-shadow-color-rgb: 0,0,0;
+    --outline-color-rgb: 2,179,182;
+    --dark-color-rgb: 2,79,81;
+    --light-color-rgb: 201,253,255;
+  }
+}
+
+@media (prefers-color-scheme: dark) and (prefers-contrast: more) {
+  :root {
+    --bg-color: rgba(51,43,63, 1);
+    --text-color: rgba(217,197,248, 1);
+    --text-soft-color: rgba(217,197,248, 1);
+    --text-strong-color: rgba(204,174,246, 1);
+    --subtle-color: rgba(47,39,58, 1);
+    --border-color: rgba(163,137,200, 1);
+    --shadow-color: rgba(0,0,0, 1);
+    --input-color: rgba(32,32,32, 1);
+    --outline-color: rgba(3,165,168, 1);
+    --mark-color: rgba(4,228,232, 0.16);
+    --special-color: rgba(4,228,232, 1);
+    --special-bg-color: rgba(0,76,77, 1);
+    --special-text-color: rgba(226,243,243, 1);
+    --special-shadow-color: rgba(0,0,0, 1);
+    --special-mark-color: rgba(226,243,243, 0.16);
+    --light-color: rgba(67,251,255, 1);
+    --dark-color: rgba(1,59,61, 1);
+    --text-color-rgb: 217,197,248;
+    --bg-color-rgb: 51,43,63;
+    --subtle-color-rgb: 47,39,58;
+    --special-color-rgb: 4,228,232;
+    --special-text-color-rgb: 226,243,243;
+    --special-bg-color-rgb: 0,76,77;
+    --shadow-color-rgb: 0,0,0;
+    --special-shadow-color-rgb: 0,0,0;
+    --outline-color-rgb: 3,165,168;
+    --dark-color-rgb: 1,59,61;
+    --light-color-rgb: 67,251,255;
+  }
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: 'Rubik Mono One', sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: right;
+}
+
+h1 {
+  font-size: 60px;
+  color: var(--text-strong-color);
+  text-shadow: 7px 7px var(--shadow-color);
+}
+
+h2 {
+  color: var(--text-color);
+}
+
+a {
+  border: 2px solid var(--border-color);
+  background-color: var(--subtle-color);
+  border-radius: 10px;
+  font-size: 14px;
+  color: var(--text-soft-color);
+  margin: 20px;
+  padding: 10px;
+  text-decoration: none;
+  box-shadow: 1px 2px 5px var(--shadow-color);
+}
+
+a:hover {
+  background-color: var(--mark-color);
+}
+
+header {
+  margin-top: 200px;
+  margin-left: 100px;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  color: var(--special-text-color);
+  font-size: 18px;
+  text-shadow: 4px gray;
+  margin-top: 50px;
+  margin-left: 200px;
+}
+
+#about {
+  background-color: var(--subtle-color);
+  margin-top: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
