@@ -148,11 +148,9 @@ h1 {
   text-shadow: 7px 7px var(--shadow-color);
 }
 
-h2 {
-  color: var(--text-color);
-}
 
-a {
+
+#navbar a {
   border: 2px solid var(--border-color);
   background-color: var(--subtle-color);
   border-radius: 10px;
@@ -164,7 +162,7 @@ a {
   box-shadow: 1px 2px 5px var(--shadow-color);
 }
 
-a:hover {
+#navbar a:hover {
   background-color: var(--mark-color);
 }
 
@@ -175,6 +173,9 @@ header {
 
 p {
   font-family: 'Open Sans', sans-serif;
+}
+
+header p {
   color: var(--special-text-color);
   font-size: 18px;
   text-shadow: 4px gray;
@@ -183,9 +184,54 @@ p {
 }
 
 #about {
-  background-color: var(--subtle-color);
-  margin-top: 800px;
+  margin: auto;
+  background-color: var(--special-bg-color);
+  margin-top: 400px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
+  padding: 200px;
+}
+
+#about h2 {
+  color: var(--special-color);
+  margin-right: 100px;
+  text-shadow: 3px 3px var(--special-shadow-color);
+}
+
+#about p {
+  width: 600px;
+  color: var(--special-text-color);
+}
+
+#projects {
+  background-color: var(--subtle-color);
+  padding: 200px;
+}
+
+#projects h2 {
+  color: var(--text-color);
+  margin-left: 100px;
+  margin-bottom: 100px;
+  text-shadow: 3px 3px var(--shadow-color);
+}
+
+.grid {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid img {
+  box-sizing: border-box;
+  max-width: 400px;
+  border-radius: 10px;
+  border: 3px solid var(--border-color);
+  margin-bottom: 50px;
+  box-shadow: -2px 2px 5px var(--shadow-color);
+}
+
+.grid img:hover {
+  box-sizing: border-box;
+  border: 3px solid var(--special-color);
 }
