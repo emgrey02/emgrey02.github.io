@@ -18,11 +18,17 @@
     </header>
     </div>
     <div id="about">
-      <h2>About</h2>
-      <p>Emma grew up playing the clarinet through middle school and high school, so she followed her dream to go to music school for clarinet performance. After receiving a Bachelor of Music degree from Ithaca College in 2019, Emma realized she could not make a living by playing the clarinet. She needed another plan. Luckily, Emma learned she was passionate about coding after taking an Intro to Computer Science class during her undergraduate studies. It is there she learned the basics of coding with Python. Since graduating, Emma delved into learning web development through free online courses like Harvard's CS50, <i>freecodecamp</i>, and The Odin Project. Recently Emma began working towards an Associate of Applied Science degree in Interface Design and Web Development. </p>
+      <div class="about-container">
+        <img src="images/emmaclarinet.jpg"/>
+        <div class='about-stuff'>
+          <h2>About</h2>
+          <p>Emma grew up playing the clarinet through middle school and high school, so she followed her dream to go to music school for clarinet performance. After receiving a Bachelor of Music degree from Ithaca College in 2019, Emma realized she could not make a living by playing the clarinet. She needed another plan. Luckily, Emma learned she was passionate about coding after taking an Intro to Computer Science class during her undergraduate studies. It is there she learned the basics of coding with Python. Since graduating, Emma delved into learning web development through free online courses like Harvard's CS50, <i>freecodecamp</i>, and The Odin Project. Recently Emma began working towards an Associate of Applied Science degree in Interface Design and Web Development. </p>
+        </div>
+      </div>
     </div>
     <div id="projects">
       <h2>Projects</h2>
+      <div id="project-container">
       <div class='grid'>
         <div class='container'>
           <img src='images/google-homepage.png' alt="" title="google homepage project" />
@@ -30,11 +36,12 @@
           <div class="overlay">
             <div class="text-container">
               <div class="text">Google Homepage Project</div>
+              <button id='google' class="info">Info</button>
               <div class="link-container">
-                <a class="google" href="http://github.com/emgrey02/google-homepage" target="_blank">
+                <a href="http://github.com/emgrey02/google-homepage" target="_blank">
                   <div class="text">Code</div>
                 </a>
-                <a class='google' href="http://emgrey02.github.io/google-homepage" target="_blank">
+                <a href="http://emgrey02.github.io/google-homepage" target="_blank">
                   <div class="text">Live Preview</div>
                 </a>
               </div>
@@ -47,11 +54,12 @@
           <div class="overlay">
             <div class="text-container">
               <div class="text">Rock, Paper, Scissors Game</div>
+              <button id='rps' class="info">Info</button>
               <div class="link-container">
-                <a class='rps' href="http://github.com/emgrey02/rock_paper_scissors" target="_blank">              
+                <a href="http://github.com/emgrey02/rock_paper_scissors" target="_blank">              
                   <div class="text">Code</div>
                 </a>
-                <a class='rps' href="http://emgrey02.github.io/rock_paper_scissors" target="_blank">
+                <a href="http://emgrey02.github.io/rock_paper_scissors" target="_blank">
                   <div class="text">Live Preview</div>
                 </a>
               </div>
@@ -64,11 +72,12 @@
           <div class="overlay">
             <div class="text-container">
               <div class="text">Etch-A-Sketch</div>
+              <button id='etch' class="info">Info</button>
               <div class="link-container">
-                <a class="etch" href="http://github.com/emgrey02/etch-a-sketch" target="_blank">
+                <a href="http://github.com/emgrey02/etch-a-sketch" target="_blank">
                   <div class="text">Code</div>
                 </a>
-                <a class="etch" href="http://emgrey02.github.io/etch-a-sketch" target="_blank">
+                <a href="http://emgrey02.github.io/etch-a-sketch" target="_blank">
                   <div class="text">Live Preview</div>
                 </a>
               </div>
@@ -81,11 +90,12 @@
           <div class="overlay">
             <div class="text-container">
               <div class="text">Calculator</div>
+              <button id='calc' class="info">Info</button>
               <div class="link-container">
-                <a class="calc" href="http://github.com/emgrey02/calculator" target="_blank">
+                <a href="http://github.com/emgrey02/calculator" target="_blank">
                   <div class="text">Code</div>
                 </a>
-                <a class="calc" href="http://emgrey02.github.io/calculator" target="_blank">
+                <a href="http://emgrey02.github.io/calculator" target="_blank">
                   <div class="text">Live Preview</div>
                 </a>
               </div>
@@ -98,11 +108,12 @@
           <div class="overlay">
             <div class="text-container">
               <div class="text">Technical Documentation Page</div>
+              <button id='tech' class="info">Info</button>
               <div class="link-container">
-                <a class="tech" href="http://github.com/emgrey02/technical-documentation" target="_blank">
+                <a href="http://github.com/emgrey02/technical-documentation" target="_blank">
                   <div class="text">Code</div>
                 </a>
-                <a class="tech" href="http://emgrey02.github.io/technical-documentation" target="_blank">
+                <a href="http://emgrey02.github.io/technical-documentation" target="_blank">
                   <div class="text">Live Preview</div>
                 </a>
               </div>
@@ -115,11 +126,12 @@
           <div class="overlay">
             <div class="text-container">
               <div class="text">Product Landing Page</div>
+              <button id='product' class="info">Info</button>
               <div class="link-container">
-                <a class="tech" href="http://github.com/emgrey02/product-landing-page" target="_blank">
+                <a href="http://github.com/emgrey02/product-landing-page" target="_blank">
                   <div class="text">Code</div>
                 </a>
-                <a class="tech" href="http://emgrey02.github.io/product-landing-page" target="_blank">
+                <a href="http://emgrey02.github.io/product-landing-page" target="_blank">
                   <div class="text">Live Preview</div>
                 </a>
               </div>
@@ -132,11 +144,12 @@
           <div class="overlay">
             <div class="text-container">
               <div class="text">Survey</div>
+              <button id='survey' class="info">Info</button>
               <div class="link-container">
-                <a class="tech" href="http://github.com/emgrey02/survey-page" target="_blank">
+                <a href="http://github.com/emgrey02/survey-page" target="_blank">
                   <div class="text">Code</div>
                 </a>
-                <a class="tech" href="http://emgrey02.github.io/survey-page" target="_blank">
+                <a href="http://emgrey02.github.io/survey-page" target="_blank">
                   <div class="text">Live Preview</div>
                 </a>
               </div>
@@ -149,11 +162,12 @@
           <div class="overlay">
             <div class="text-container">
               <div class="text">Tribute Page</div>
+              <button id='tribute' class="info">Info</button>
               <div class="link-container">
-                <a class="tech" href="http://github.com/emgrey02/tribute-page" target="_blank">
+                <a href="http://github.com/emgrey02/tribute-page" target="_blank">
                   <div class="text">Code</div>
                 </a>
-                <a class="tech" href="http://emgrey02.github.io/tribute-page" target="_blank">
+                <a href="http://emgrey02.github.io/tribute-page" target="_blank">
                   <div class="text">Live Preview</div>
                 </a>
               </div>
@@ -161,6 +175,12 @@
           </div>
         </div>
       </div>
+      <div id="info-text">
+        <h2>my projects</h2>
+        <b><hr></b>
+        <p>click 'info' for more information about each project!</p>
+      </div>
+    </div>
     </div>
     <a href="http://www.freepik.com">Designed by rawpixel.com / Freepik</a>
   </body>
