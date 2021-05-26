@@ -285,6 +285,8 @@ p {
   }
 }
 
+/*PROJECTS*/
+
 #projects {
   min-height: 100vh;
   background-color: var(--subtle-color);
@@ -300,7 +302,7 @@ p {
   color: var(--text-color);
   padding-top: 100px;
   margin-left: 100px;
-  margin-bottom: 100px;
+  margin-bottom: 10px;
   text-shadow: 3px 3px var(--shadow-color);
 }
 
@@ -415,6 +417,30 @@ p {
 
 .text {
   text-align: center;
+}
+
+.filters {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+input {
+  display: none;
+}
+
+label {
+  margin-right: 30px;
+  cursor: pointer;
+  color: white;
+  font-size: 14px;
+  padding: 5px;
+}
+
+.color {
+  background-color: rgb(160, 76, 135);
+  transition: background-color 2s ease;
+  border-radius: 10px;
 }
 
 @keyframes appear {

@@ -12,6 +12,7 @@ let identifyProject = (e) => {
 let inputText = (project) => {
   const title = infoText.querySelector('h2');
   const info = infoText.querySelector('p');
+  
   infoText.style.animation = 'appear 400ms ease-in';
   setTimeout(function() {
     infoText.style.animation = '';
@@ -46,6 +47,42 @@ let inputText = (project) => {
 
 };
 
+let changeColor = (e) => {
+  let allLabels = document.querySelectorAll('label');
+  allLabels.forEach(label => label.classList.remove('color'));
+  
+  let label = e.target;
+  label.setAttribute('class','color');
+}
+
+let sortProjects = (e) => {
+  changeColor(e);
+  if (e.target.htmlFor === "HTML/CSS") {
+    let byebye = document.querySelectorAll('.Javascript');
+    byebye.forEach(project => {
+      project.style.cssText = 'display: none;';
+    });
+    let projects = document.querySelectorAll('.HTML');
+    projects.forEach(project => {
+      project.style.cssText = 'display: all;';
+    });
+  } else if (e.target.htmlFor === "Javascript") {
+    let byebye = document.querySelectorAll('.HTML');
+    byebye.forEach(project => {
+      project.style.cssText = 'display: none;';
+    });
+    let projects = document.querySelectorAll('.Javascript');
+    projects.forEach(project => {
+      project.style.cssText = 'display: all;';
+    });
+  } else if (e.target.htmlFor === "All") {
+    let projects = document.querySelectorAll('.container');
+    projects.forEach(project => {
+      project.style.cssText = 'display: all;';
+    })
+  }
+}
+
 let startAnimation = () => {
   myJob.style.cssText = ('display: block; animation-name: boomin; animation-duration: 1s;animation-timing-function: ease-out');
 };
@@ -53,3 +90,6 @@ let startAnimation = () => {
 let infoButton = document.querySelectorAll('.info');
 infoButton.forEach(button => button.addEventListener('click', identifyProject));
 myName.addEventListener('animationend', startAnimation);
+
+let radioButtons = document.querySelectorAll('.option');
+radioButtons.forEach(option => option.addEventListener('click', sortProjects));
