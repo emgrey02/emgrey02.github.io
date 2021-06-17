@@ -432,14 +432,14 @@ input {
 label {
   margin-right: 30px;
   cursor: pointer;
-  color: white;
+  color: var(--special-text-color);
   font-size: 14px;
-  padding: 5px;
+  padding: 10px;
 }
 
 .color {
-  background-color: rgb(160, 76, 135);
-  transition: background-color 2s ease;
+  background-color: var(--special-bg-color);
+  transition: background-color 1s ease;
   border-radius: 10px;
 }
 
