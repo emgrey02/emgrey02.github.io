@@ -48,16 +48,19 @@ let inputText = (project) => {
 };
 
 let changeColor = (e) => {
-  let allLabels = document.querySelectorAll('label');
+  let filter = document.querySelector('.filters');
+  let allLabels = filter.querySelectorAll('button');
   allLabels.forEach(label => label.classList.remove('color'));
   
   let label = e.target;
   label.setAttribute('class','color');
+
+  console.log(e.target.innerText);
 }
 
 let sortProjects = (e) => {
   changeColor(e);
-  if (e.target.htmlFor === "HTML/CSS") {
+  if (e.target.innerText === "HTML/CSS") {
     let byebye = document.querySelectorAll('.Javascript');
     byebye.forEach(project => {
       project.style.cssText = 'display: none;';
@@ -66,7 +69,7 @@ let sortProjects = (e) => {
     projects.forEach(project => {
       project.style.cssText = 'display: all;';
     });
-  } else if (e.target.htmlFor === "Javascript") {
+  } else if (e.target.innerText === "Javascript") {
     let byebye = document.querySelectorAll('.HTML');
     byebye.forEach(project => {
       project.style.cssText = 'display: none;';
@@ -75,7 +78,7 @@ let sortProjects = (e) => {
     projects.forEach(project => {
       project.style.cssText = 'display: all;';
     });
-  } else if (e.target.htmlFor === "All") {
+  } else if (e.target.innerText === "All") {
     let projects = document.querySelectorAll('.container');
     projects.forEach(project => {
       project.style.cssText = 'display: all;';
