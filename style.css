@@ -462,7 +462,7 @@ button {
   box-shadow: 2px 2px 5px var(--special-shadow-color);
 }
 
-#info-text h2 {
+#info-text h3 {
   margin: 0;
   padding: 20px;
   text-align: center;
