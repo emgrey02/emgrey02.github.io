@@ -6,11 +6,12 @@ const infoText = document.querySelector('#info-text');
 
 
 let identifyProject = (e) => {
+  console.log(e.target.id);
   inputText(e.target.id);
 }
 
 let inputText = (project) => {
-  const title = infoText.querySelector('h2');
+  const title = infoText.querySelector('h3');
   const info = infoText.querySelector('p');
   
   infoText.style.animation = 'appear 400ms ease-in';

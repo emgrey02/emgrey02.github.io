@@ -5,209 +5,209 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emma Grey</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
   </head>
+
   <body>
     <div id="background">
-    <nav id="navbar">
-      <a href="#about">about</a>
-      <a href="#projects">projects</a>
-      <a href="#">experience</a>
-    </nav>
-    <header>
-      <h1 id='name'>Emma Grey</h1>
-      <p id='job'>web developer, musician.</p>
-    </header>
+      <nav id="navbar">
+        <a href="#about">about</a>
+        <a href="#projects">projects</a>
+        <a href="#">experience</a>
+      </nav>
+      <header>
+        <h1 id='name'>Emma Grey</h1>
+        <p id='job'>web developer, musician.</p>
+      </header>
     </div>
-    <div id="about">
-      <div class="about-container">
-        <img src="images/emmaclarinet.jpg" alt="emma playing the clarinet"/>
-        <div class='about-stuff'>
-          <h2>About</h2>
-          <p>Hey there! My name is Emma (she/her).</p>
-          <p>I am a beginner web developer based in New Jersey. My goal is to build beautiful, simple, and accessible websites for everyone.</p>
-          <p>Before I built websites, I played the clarinet and other woodwind instruments. While I loved getting my bachelor's degree in music performance, I realize now a career in music isn't plausible for me anymore. My passion for music will never go away, but now I can pursue another passion of mine: coding! I've been hooked ever since I took an Intro to Computer Science class during my music degree.</p>
-          <p>Thanks for coming to my portfolio website! If you want to contact me please email me at emgrey02@gmail.com. Love you!</p>
-          <!-- <iframe src="https://open.spotify.com/embed/track/5tGZQwvvkYR68maK85XLXh" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe> -->
-        </div>
+
+    <section id="about">
+      <img src="images/emmaclarinet.jpg" alt="emma playing the clarinet"/>
+      <div class='about-stuff'>
+        <h2>About</h2>
+        <p>Hey there! My name is Emma (she/her).</p>
+        <p>I am a beginner web developer based in New Jersey. My goal is to build beautiful, simple, and accessible websites for everyone.</p>
+        <p>Before I built websites, I played the clarinet and other woodwind instruments. While I loved getting my bachelor's degree in music performance, I realize now a career in music isn't plausible for me anymore. My passion for music will never go away, but now I can pursue another passion of mine: coding! I've been hooked ever since I took an Intro to Computer Science class during my music degree.</p>
+        <p>Thanks for coming to my portfolio website! If you want to contact me please email me at emgrey02@gmail.com. Love you!</p>
       </div>
-    </div>
-    <div id="projects">
+    </section>
+
+    <section id="projects">
       <h2>Projects</h2>
       <div id="project-container">
-      <div class='grid'>
-        <div class='container HTML'>
-          <img src='images/google-homepage.png' alt="google homepage project" />
-          <div class="shadow"></div>
-          <div class="overlay">
-            <div class="text-container">
-              <div class="text">Google Homepage Project</div>
-              <button id='google' class="info">Info</button>
-              <div class="link-container">
-                <a href="http://github.com/emgrey02/google-homepage" target="_blank">
-                  <div class="text">Code</div>
-                </a>
-                <a href="http://emgrey02.github.io/google-homepage" target="_blank">
-                  <div class="text">Live Preview</div>
-                </a>
+        <div class='grid'>
+          <div class='container HTML'>
+            <img src='images/google-homepage.png' alt="google homepage project" />
+            <div class="shadow"></div>
+            <div class="overlay">
+              <div class="text-container">
+                <h3>Google Homepage Project</h3>
+                <button id='google' class="info">Info</button>
+                <div class="link-container">
+                  <a href="http://github.com/emgrey02/google-homepage" target="_blank">
+                    Code
+                  </a>
+                  <a href="http://emgrey02.github.io/google-homepage" target="_blank">
+                    Live Preview
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class='container HTML Javascript'>
+            <img src="images/rock-paper-scissors.png" alt="preview of my rock, paper, scissors game"/>
+            <div class="shadow"></div>
+            <div class="overlay">
+              <div class="text-container">
+                <h3>Rock, Paper, Scissors Game</h3>
+                <button id='rps' class="info">Info</button>
+                <div class="link-container">
+                  <a href="http://github.com/emgrey02/rock_paper_scissors" target="_blank">              
+                    Code
+                  </a>
+                  <a href="http://emgrey02.github.io/rock_paper_scissors" target="_blank">
+                    Live Preview
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class='container HTML Javascript'>
+            <img src="images/etch-a-sketch.png" alt="preview of etch-a-sketch game "/>
+            <div class="shadow"></div>
+            <div class="overlay">
+              <div class="text-container">
+                <h3>Etch-A-Sketch</h3>
+                <button id='etch' class="info">Info</button>
+                <div class="link-container">
+                  <a href="http://github.com/emgrey02/etch-a-sketch" target="_blank">
+                    Code
+                  </a>
+                  <a href="http://emgrey02.github.io/etch-a-sketch" target="_blank">
+                    Live Preview
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class='container HTML Javascript'>
+            <img src="images/calculator.png" alt="preview of a calculator"/>
+            <div class="shadow"></div>
+            <div class="overlay">
+              <div class="text-container">
+                <h3>Calculator</h3>
+                <button id='calc' class="info">Info</button>
+                <div class="link-container">
+                  <a href="http://github.com/emgrey02/calculator" target="_blank">
+                    Code
+                  </a>
+                  <a href="http://emgrey02.github.io/calculator" target="_blank">
+                    Live Preview
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class='container HTML'>
+            <img src="images/documentation.png" alt="preview of documentation page"/>
+            <div class="shadow"></div>
+            <div class="overlay">
+              <div class="text-container">
+                <h3>Technical Documentation Page</h3>
+                <button id='tech' class="info">Info</button>
+                <div class="link-container">
+                  <a href="http://github.com/emgrey02/technical-documentation" target="_blank">
+                    Code
+                  </a>
+                  <a href="http://emgrey02.github.io/technical-documentation" target="_blank">
+                    Live Preview
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class='container HTML'>
+            <img src="images/product.png" alt="preview of product landing page"/>
+            <div class="shadow"></div>
+            <div class="overlay">
+              <div class="text-container">
+                <h3>Product Landing Page</h3>
+                <button id='product' class="info">Info</button>
+                <div class="link-container">
+                  <a href="http://github.com/emgrey02/product-landing-page" target="_blank">
+                    Code
+                  </a>
+                  <a href="http://emgrey02.github.io/product-landing-page" target="_blank">
+                    Live Preview
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class='container HTML'>
+            <img src="images/survey.png" alt="preview of survey page"/>
+            <div class="shadow"></div>
+            <div class="overlay">
+              <div class="text-container">
+                <h3>Survey</h3>
+                <button id='survey' class="info">Info</button>
+                <div class="link-container">
+                  <a href="http://github.com/emgrey02/survey-page" target="_blank">
+                    Code
+                  </a>
+                  <a href="http://emgrey02.github.io/survey-page" target="_blank">
+                    Live Preview
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class='container HTML'>
+            <img src="images/tribute-page.png" alt="preview of tribute page"/>
+            <div class="shadow"></div>
+            <div class="overlay">
+              <div class="text-container">
+                <h3>Tribute Page</h3>
+                <button id='tribute' class="info">Info</button>
+                <div class="link-container">
+                  <a href="http://github.com/emgrey02/tribute-page" target="_blank">
+                    Code
+                  </a>
+                  <a href="http://emgrey02.github.io/tribute-page" target="_blank">
+                    Live Preview
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class='container HTML Javascript'>
-          <img src="images/rock-paper-scissors.png" alt="preview of my rock, paper, scissors game"/>
-          <div class="shadow"></div>
-          <div class="overlay">
-            <div class="text-container">
-              <div class="text">Rock, Paper, Scissors Game</div>
-              <button id='rps' class="info">Info</button>
-              <div class="link-container">
-                <a href="http://github.com/emgrey02/rock_paper_scissors" target="_blank">              
-                  <div class="text">Code</div>
-                </a>
-                <a href="http://emgrey02.github.io/rock_paper_scissors" target="_blank">
-                  <div class="text">Live Preview</div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class='container HTML Javascript'>
-          <img src="images/etch-a-sketch.png" alt="preview of etch-a-sketch game "/>
-          <div class="shadow"></div>
-          <div class="overlay">
-            <div class="text-container">
-              <div class="text">Etch-A-Sketch</div>
-              <button id='etch' class="info">Info</button>
-              <div class="link-container">
-                <a href="http://github.com/emgrey02/etch-a-sketch" target="_blank">
-                  <div class="text">Code</div>
-                </a>
-                <a href="http://emgrey02.github.io/etch-a-sketch" target="_blank">
-                  <div class="text">Live Preview</div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class='container HTML Javascript'>
-          <img src="images/calculator.png" alt="preview of a calculator"/>
-          <div class="shadow"></div>
-          <div class="overlay">
-            <div class="text-container">
-              <div class="text">Calculator</div>
-              <button id='calc' class="info">Info</button>
-              <div class="link-container">
-                <a href="http://github.com/emgrey02/calculator" target="_blank">
-                  <div class="text">Code</div>
-                </a>
-                <a href="http://emgrey02.github.io/calculator" target="_blank">
-                  <div class="text">Live Preview</div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class='container HTML'>
-          <img src="images/documentation.png" alt="preview of documentation page"/>
-          <div class="shadow"></div>
-          <div class="overlay">
-            <div class="text-container">
-              <div class="text">Technical Documentation Page</div>
-              <button id='tech' class="info">Info</button>
-              <div class="link-container">
-                <a href="http://github.com/emgrey02/technical-documentation" target="_blank">
-                  <div class="text">Code</div>
-                </a>
-                <a href="http://emgrey02.github.io/technical-documentation" target="_blank">
-                  <div class="text">Live Preview</div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class='container HTML'>
-          <img src="images/product.png" alt="preview of product landing page"/>
-          <div class="shadow"></div>
-          <div class="overlay">
-            <div class="text-container">
-              <div class="text">Product Landing Page</div>
-              <button id='product' class="info">Info</button>
-              <div class="link-container">
-                <a href="http://github.com/emgrey02/product-landing-page" target="_blank">
-                  <div class="text">Code</div>
-                </a>
-                <a href="http://emgrey02.github.io/product-landing-page" target="_blank">
-                  <div class="text">Live Preview</div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class='container HTML'>
-          <img src="images/survey.png" alt="preview of survey page"/>
-          <div class="shadow"></div>
-          <div class="overlay">
-            <div class="text-container">
-              <div class="text">Survey</div>
-              <button id='survey' class="info">Info</button>
-              <div class="link-container">
-                <a href="http://github.com/emgrey02/survey-page" target="_blank">
-                  <div class="text">Code</div>
-                </a>
-                <a href="http://emgrey02.github.io/survey-page" target="_blank">
-                  <div class="text">Live Preview</div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class='container HTML'>
-          <img src="images/tribute-page.png" alt="preview of tribute page"/>
-          <div class="shadow"></div>
-          <div class="overlay">
-            <div class="text-container">
-              <div class="text">Tribute Page</div>
-              <button id='tribute' class="info">Info</button>
-              <div class="link-container">
-                <a href="http://github.com/emgrey02/tribute-page" target="_blank">
-                  <div class="text">Code</div>
-                </a>
-                <a href="http://emgrey02.github.io/tribute-page" target="_blank">
-                  <div class="text">Live Preview</div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="right-container">
-      <div class="filters">
 
-        <button class="option" id="label-one">
-          HTML/CSS
-        </button>
-        
-        <button class="option" id="label-two">
-          Javascript
-        </button>
-        
-        <button class="option color" id="label-three">
-          All
-        </button>
-         
+        <div class="right-container">
+          <div class="filters">
+
+            <button class="option" id="label-one">
+              HTML/CSS
+            </button>
+            
+            <button class="option" id="label-two">
+              Javascript
+            </button>
+            
+            <button class="option color" id="label-three">
+              All
+            </button>
+            
+          </div>
+          <div class="animation" id="info-text">
+            <h3>my projects</h3>
+            <hr>
+            <p>click 'info' while hovering over an image for more information about the project!</p>
+          </div>
+        </div>
+
       </div>
-      <div class="animation" id="info-text">
-        <h3>my projects</h3>
-        <b></b>
-        <hr>
-        <p>click 'info' for more information about each project!</p>
-      </div>
-    </div>
-    </div>
-    </div>
-    
-    <a href="http://www.freepik.com">Designed by rawpixel.com / Freepik</a>
+    </section>
 
   </body>
-  <script src="script.js"></script>
+  
 </html>
