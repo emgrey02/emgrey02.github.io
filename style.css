@@ -29,7 +29,7 @@ body {
 
 h2 {
   font-size: 30px;
-  color: var(--terra-cotta);
+  color: black;
   text-shadow: 3px 3px var(--english-violet);
 }
 
@@ -68,9 +68,10 @@ nav {
   width: 100%;
   display: flex;
   justify-content: right;
+  z-index: 1;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   nav {
     justify-content: center;
   }
@@ -98,8 +99,8 @@ header {
 
 #name {
   font-size: 60px;
-  color: var(--english-violet);
-  text-shadow: 7px 7px var(--terra-cotta);
+  color: black;
+  text-shadow: 7px 7px var(--english-violet);
   margin-left: 100px;
   animation-name: zoomin;
   animation-duration: 1s;
@@ -124,6 +125,24 @@ header {
   font-weight: bolder;
   margin-top: 50px;
   margin-left: 300px;
+  text-shadow: none;
+  display: block; 
+  animation-name: boomin; 
+  animation-duration: 1s;
+  animation-timing-function: ease;
+}
+
+@media (max-width: 640px) {
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #name, #job {
+    animation: none;
+    margin-left: 0;
+    align-self: center;
+  }
 }
 
 /* ABOUT SECTION START */
@@ -137,7 +156,9 @@ header {
 }
 
 #about img {
-  width: 40%;
+  max-width: 100%;
+  display: block;
+  width: 600px;
   height: auto;
   border-radius: 100%;
   border: 3px solid var(--english-violet);
@@ -155,11 +176,18 @@ header {
   margin-bottom: 60px;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1200px) {
   #about {
+    width: 100%;
     flex-direction: column-reverse;
     align-items: center;
     height: max-content;
+  }
+
+  #about img {
+    width: 80%;
+    margin-top: 50px;
+    align-self: center;
   }
 
   .about-stuff {
@@ -168,12 +196,7 @@ header {
 
   .about-stuff h2 {
     text-align: center;
-    margin-top: 80px;
-  }
-
-  #about img {
-    align-self: center;
-    margin-bottom: 80px;
+    margin-top: 100px;
   }
 }
 
@@ -201,25 +224,73 @@ header {
 }
 
 .grid {
-  margin-left: 50px;
-  width: 60%;
+  padding: 50px;
+  width: 960px;
   height: 60vh;
   display: grid;
-  grid-template-columns: repeat(auto-fill, 300px);
+  grid-template-columns: repeat(auto-fit, 300px);
   grid-template-rows: repeat(8, 300px);
   grid-gap: 20px;
   overflow-y: scroll;
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 1650px) {
   .grid {
-    width: 650px;
+    width: 640px;
+  }
+}
+
+@media (max-width: 1350px) {
+  .grid {
+    width: 400px;
+    grid-template-columns: 400px;
+    grid-template-rows: repeat(8, 400px);
   }
 }
 
 @media (max-width: 1200px) {
+  #project-container {
+    flex-direction: column-reverse;
+  }
+
+  #projects {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  #projects h2 {
+    text-align: center;
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+
   .grid {
-    width: 400px;
+    margin: 30px;
+    padding: 20px;
+    height: 40vh;
+    width: 960px;
+    grid-template-columns: repeat(auto-fit, 300px);
+    grid-template-rows: repeat(4, 300px);
+  }
+}
+
+@media (max-width: 960px) {
+  .grid {
+    width: 640px;
+  }
+}
+
+@media (max-width: 650px) {
+  .grid {
+    width: auto;
+    grid-template-columns: 400px;
+    grid-template-rows: repeat(auto-fit, 400px);
+    overflow: visible;
+    height: auto;
+  }
+
+  #projects {
+    height: fit-content;
   }
 }
 
@@ -230,7 +301,7 @@ header {
 
 .grid img {
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 4rem;
   width: 100%;
   height: 100%;
   margin-bottom: 50px;
@@ -242,7 +313,7 @@ header {
 .shadow {
   position: absolute;
   box-shadow: inset 1px 1px 5px var(--english-violet);
-  border-radius: 10px;
+  border-radius: 4rem;
   width: 100%;
   height: 100%;
   top: 0;
@@ -259,13 +330,24 @@ header {
   right: 0;
   opacity: 0;
   transition: 0.5s ease;
-  border-radius: 10px;
+  border-radius: 4rem;
   box-shadow: inset 2px 2px 20px var(--english-violet);
   background-color: var(--medium-spring-green);
 }
 
 .container:hover .overlay {
   opacity: 95%;
+}
+
+@media (pointer: coarse) {
+  .grid .overlay {
+    height: 250px;
+    width: 400px;
+    background: var(--pewter-blue);
+    top: 20%;
+    opacity: 90%;
+    border-radius: 0;
+  }
 }
 
 .overlay .text-container {
@@ -283,6 +365,7 @@ header {
   width: 100%;
   flex-direction: row;
   justify-content: space-around;
+  margin-bottom: 10px;
 }
 
 .link-container a {
@@ -323,12 +406,29 @@ header {
   align-self: center;
   width: 400px;
   height: auto;
-  margin: 50px;
 }
 
 #info-text p {
   margin: 20px;
   font-size: 16px;
+}
+
+@media (max-width: 1200px) {
+  #info-text {
+    width: 800px;
+  }
+}
+
+@media (max-width: 960px) {
+  #info-text {
+    width: 600px;
+  }
+}
+
+@media (max-width: 600px) {
+  #info-text {
+    width: 400px;
+  }
 }
 
 hr {

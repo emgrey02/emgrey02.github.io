@@ -87,13 +87,8 @@ let sortProjects = (e) => {
   }
 }
 
-let startAnimation = () => {
-  myJob.style.cssText = ('display: block; animation-name: boomin; animation-duration: 1s;animation-timing-function: ease-out');
-};
-
 let infoButton = document.querySelectorAll('.info');
 infoButton.forEach(button => button.addEventListener('click', identifyProject));
-myName.addEventListener('animationend', startAnimation);
 
 let radioButtons = document.querySelectorAll('.option');
 radioButtons.forEach(option => option.addEventListener('click', sortProjects));
