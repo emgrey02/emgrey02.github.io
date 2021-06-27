@@ -91,4 +91,4 @@ let infoButton = document.querySelectorAll('.info');
 infoButton.forEach(button => button.addEventListener('click', identifyProject));
 
 let radioButtons = document.querySelectorAll('.option');
-radioButtons.forEach(option => option.addEventListener('click', sortProjects));
+radioButtons.forEach(option => option.addEventListener('mousedown', sortProjects));
