@@ -35,6 +35,8 @@ body::before {
 }
 
 body {
+  top: 0;
+  left: 0;
   margin: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
