@@ -103,8 +103,6 @@ let toggleMenu = (e) => {
     toggled = true;
   }
 
-  
-
 }
 
 let infoButton = document.querySelectorAll('.info');
