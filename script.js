@@ -3,6 +3,11 @@ let myName = document.querySelector('#name');
 let myJob = document.querySelector('#job');
 let aboutText = document.querySelector('.about-stuff');
 const infoText = document.querySelector('#info-text');
+let toggleButton = document.querySelector('.nav-toggle');
+let mobileMenu = document.querySelector('.mobile-menu');
+
+let toggled = false;
+
 
 
 let identifyProject = (e) => {
@@ -87,8 +92,28 @@ let sortProjects = (e) => {
   }
 }
 
+let toggleMenu = (e) => {
+  if (toggled === true) {
+    mobileMenu.classList.remove('show');
+    toggleButton.classList.remove('show');
+    toggled = false;
+  } else {
+    mobileMenu.classList.add('show');
+    toggleButton.classList.add('show');
+    toggled = true;
+  }
+
+  
+
+}
+
 let infoButton = document.querySelectorAll('.info');
 infoButton.forEach(button => button.addEventListener('click', identifyProject));
 
 let radioButtons = document.querySelectorAll('.option');
 radioButtons.forEach(option => option.addEventListener('mousedown', sortProjects));
+
+toggleButton.addEventListener('mousedown', toggleMenu);
+
+let mobileButtons = mobileMenu.querySelectorAll('.mob')
+mobileButtons.forEach(button => button.addEventListener('mousedown', toggleMenu));
