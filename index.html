@@ -11,17 +11,36 @@
   </head>
 
   <body>
-    <div id="background">
-      <nav id="navbar">
-        <a href="#about">about</a>
-        <a href="#projects">projects</a>
-        <a href="#">experience</a>
-      </nav>
-      <header>
-        <h1 id='name'>Emma Grey</h1>
-        <h2 id='job'>web developer, musician.</h2>
-      </header>
-    </div>
+    <header>
+      <div id="img-container">
+        <img src="images/squid-profile-colors.png" alt="squid with headphones logo">
+      </div>
+      <div id="navbar">
+        <ul class="menu-buttons">
+          <li><a href="#about">about</a></li>
+          <li><a href="#projects">projects</a></li>
+          <li><a href="#">experience</a></li>
+        </ul>
+      </div>
+      <div class="nav-toggle">
+        <div id="burger">
+          <span class="one"></span>
+          <span class="two"></span>
+        </div>
+      </div>
+      <div class="mobile-menu">
+        <ul class="mobile-menu-buttons">
+          <li class="mob"><a href="#about">about</a></li>
+          <li class="mob"><a href="#projects">projects</a></li>
+          <li class="mob"><a href="#">experience</a></li>
+        </ul>
+      </div>
+    </header>
+    
+    <section id="main">
+      <h1 id='name'>Emma Grey</h1>
+      <h2 id='job'>web developer, musician.</h2>
+    </section>
 
     <section id="about">
       <img src="images/emmaclarinet.jpg" alt="emma playing the clarinet"/>
