@@ -22,7 +22,7 @@
   --medium-spring-green-faded: rgba(50, 222, 139, 0.568);
 }
 
-body {
+body::before {
   margin: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background: var(--pewter-blue);
