@@ -60,8 +60,6 @@ let changeColor = (e) => {
   
   let label = e.target;
   label.setAttribute('class','color');
-
-  console.log(e.target.innerText);
 }
 
 let sortProjects = (e) => {
@@ -98,7 +96,7 @@ let toggleMenu = (e) => {
   if (href) {
     window.location = href;
   }
-  
+
   if (toggled === true) {
     mobileMenu.classList.remove('show');
     toggleButton.classList.remove('show');
@@ -115,9 +113,9 @@ let infoButton = document.querySelectorAll('.info');
 infoButton.forEach(button => button.addEventListener('click', identifyProject));
 
 let radioButtons = document.querySelectorAll('.option');
-radioButtons.forEach(option => option.addEventListener('mousedown', sortProjects));
+radioButtons.forEach(option => option.addEventListener('click', sortProjects));
 
 toggleButton.addEventListener('mousedown', toggleMenu);
 
 let mobileButtons = mobileMenu.querySelectorAll('.mob')
-mobileButtons.forEach(button => button.addEventListener('mousedown', toggleMenu));
+mobileButtons.forEach(button => button.addEventListener('click', toggleMenu));
