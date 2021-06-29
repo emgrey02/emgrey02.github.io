@@ -50,7 +50,7 @@ h3 {
   text-align: center;
 }
 
-P {
+p {
   font-size: 20px;
   line-height: 1.5;
 }
@@ -111,7 +111,15 @@ header img {
 }
 
 .mobile-menu-buttons li {
-  margin: 30px;
+  margin-bottom: 50px;
+}
+
+.mobile-menu-buttons li a {
+  font-weight: bolder;
+  font-size: 20px;
+  background: none;
+  box-shadow: none;
+  border: none;
 }
 
 @media (max-width: 900px) {
@@ -188,6 +196,11 @@ header img {
 #main {
   margin-top: 200px;
   height: 80vh;
+}
+
+#main img {
+  width: 300px;
+  margin-left: 70%;
 }
 
 @keyframes zoomin {
