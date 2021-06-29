@@ -547,6 +547,25 @@ header img {
 hr {
   color: var(--english-violet);
 }
+#attributes {
+  display: flex;
+  justify-content: space-around;
+}
+
+#attributes p {
+  font-size: 14px;
+}
+
+#attributes a{
+  background: none;
+  border: none;
+  box-shadow: none;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  text-decoration-line: underline;
+  color: white;
+}
 
 html {
   scroll-behavior: smooth;
