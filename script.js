@@ -93,6 +93,12 @@ let sortProjects = (e) => {
 }
 
 let toggleMenu = (e) => {
+  let href = e.target.href;
+
+  if (href) {
+    window.location = href;
+  }
+  
   if (toggled === true) {
     mobileMenu.classList.remove('show');
     toggleButton.classList.remove('show');

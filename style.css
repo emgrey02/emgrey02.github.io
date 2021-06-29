@@ -20,6 +20,7 @@
   --pewter-blue-faded: rgba(119, 156, 171, 0.521);
   --english-violet-faded: rgba(107, 78, 113, 0.568);
   --medium-spring-green-faded: rgba(50, 222, 139, 0.568);
+  --middle-blue-green-faded: rgba(162, 232, 222, 0.918);
 }
 
 body::before {
@@ -35,8 +36,6 @@ body::before {
 }
 
 body {
-  top: 0;
-  left: 0;
   margin: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -111,17 +110,17 @@ header img {
   align-items: center;
 }
 
-li {
+.mobile-menu-buttons li {
   margin: 30px;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 900px) {
   #navbar {
     display: none;
   }
 }
 
-@media (min-width: 640px) {
+@media (min-width: 900px) {
   .nav-toggle {
     display: none;
   }
@@ -169,7 +168,7 @@ li {
   left: 0;
   right: 0;
   height: 100vh;
-  background: var(--terra-cotta);
+  background: var(--middle-blue-green-faded);
   align-items: center;
   justify-content: center;
   opacity: 0;
@@ -284,8 +283,13 @@ li {
 }
 
 .about-stuff h2 {
+  color: white;
   text-align: right;
   margin-bottom: 60px;
+}
+
+.about-stuff p {
+  color: white;
 }
 
 @media (max-width: 1200px) {
@@ -308,7 +312,7 @@ li {
 
   .about-stuff h2 {
     text-align: center;
-    margin-top: 100px;
+    margin-top: 120px;
   }
 }
 
@@ -330,7 +334,7 @@ li {
 }
 
 #projects h2 {
-  padding-top: 100px;
+  padding-top: 120px;
   margin-left: 100px;
   margin-bottom: 80px;
 }
@@ -341,7 +345,7 @@ li {
   height: 60vh;
   display: grid;
   grid-template-columns: repeat(auto-fit, 300px);
-  grid-template-rows: repeat(8, 300px);
+  grid-template-rows: repeat(auto-fit, 1fr);
   grid-gap: 20px;
   overflow-y: scroll;
 }
@@ -356,7 +360,7 @@ li {
   .grid {
     width: 400px;
     grid-template-columns: 400px;
-    grid-template-rows: repeat(8, 400px);
+    grid-template-rows: repeat(auto-fit, 1fr);
   }
 }
 
@@ -382,21 +386,21 @@ li {
     height: 40vh;
     width: 960px;
     grid-template-columns: repeat(auto-fit, 300px);
-    grid-template-rows: repeat(4, 300px);
+    grid-template-rows: repeat(auto-fit, 1fr);
   }
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1050px) {
   .grid {
     width: 640px;
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 700px) {
   .grid {
     width: auto;
-    grid-template-columns: 400px;
-    grid-template-rows: repeat(auto-fit, 400px);
+    grid-template-columns: 350px;
+    grid-template-rows: repeat(auto-fit, 1fr);
     overflow: visible;
     height: auto;
   }
@@ -528,13 +532,13 @@ li {
   }
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1050px) {
   #info-text {
     width: 600px;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   #info-text {
     width: 400px;
   }
