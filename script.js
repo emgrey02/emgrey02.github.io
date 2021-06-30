@@ -63,7 +63,6 @@ let changeColor = (e) => {
 }
 
 let sortProjects = (e) => {
-  changeColor(e);
   if (e.target.innerText === "HTML/CSS") {
     let byebye = document.querySelectorAll('.Javascript');
     byebye.forEach(project => {
@@ -119,3 +118,5 @@ toggleButton.addEventListener('mousedown', toggleMenu);
 
 let mobileButtons = mobileMenu.querySelectorAll('.mob')
 mobileButtons.forEach(button => button.addEventListener('click', toggleMenu));
+
+document.addEventListener("touchstart", function() {},false);
