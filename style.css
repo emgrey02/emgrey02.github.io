@@ -409,7 +409,6 @@ h3 {
 
 .project-display-container {
   display: flex;
-  border: 3px dashed var(--dark-color);
   border-radius: 1rem;
   height: 305px;
 }
@@ -428,6 +427,7 @@ hr {
   width: 50px;
   height: 300px;
 }
+
 
 .project-image img {
   width: 300px;

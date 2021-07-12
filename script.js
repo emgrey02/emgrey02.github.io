@@ -5,6 +5,37 @@ const input = document.querySelectorAll('input');
 const projects = document.querySelectorAll('.item');
 const htmls = document.querySelectorAll('.HTML');
 const javascripts = document.querySelectorAll('.Javascript');
+const linkContainers = document.querySelectorAll('.project-links');
+
+
+const outlineCurrentItem = (e) => {
+  let currentProject;
+  let itemName = e.target.parentElement.classList[1];
+  projects.forEach(project => {
+    if (project.classList[2] == itemName) {
+      currentProject = project;
+    }
+  })
+  currentProject.style.border = '4px solid var(--dark-color)';
+}
+
+const removeOutline = (e) => {
+  let currentProject;
+  let itemName = e.target.parentElement.classList[1];
+  projects.forEach(project => {
+    if (project.classList[2] == itemName) {
+      currentProject = project;
+    }
+  })
+  currentProject.style.border = 'none';
+}
+
+
+linkContainers.forEach(container => {
+  const links = container.querySelectorAll('a');
+  links.forEach(link => link.addEventListener('focus', outlineCurrentItem));
+  links.forEach(link => link.addEventListener('blur', removeOutline));
+});
 
 const openNav = () => {
   body.classList.toggle('nav-open');
@@ -26,7 +57,6 @@ toggleNav.addEventListener('click', openNav);
 
 const sortProjects = (e) => {
   let language = e.target.id;
-  console.log(language);
 
   if (language == 'html') {
     javascripts.forEach(project => {project.style.display = 'none';});
