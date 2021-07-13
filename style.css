@@ -28,20 +28,14 @@ p {
   font-size: 20px;
 }
 
-button {
-  transform: rotate(360deg);
-}
-
 a {
   display: inline-block;
-  font-size: 20px;
-  transform: rotate(360deg);
+  font-size: 22px;
 }
 
 a:link {
-  color: inherit;
+  color: var(--dark-color);
 }
-
 
 a:focus, button:focus {
   outline: 4px dashed rgb(14, 3, 119);
@@ -51,13 +45,15 @@ a:focus, button:focus {
 
 a:visited, button:visited {
   color: gray;
-  text-decoration: none;
 }
 
-a:hover, button:hover, a:active, button:active {
+a:hover, button:hover {
   color: red;
 }
 
+a:active, button:active {
+  color: blue;
+}
 
 h1 {
   font-size: 6rem;
@@ -100,36 +96,17 @@ header {
 
 #main-nav {
   position: absolute;
-  right:0;
-  top:0;
-  margin: 20px;
-  width: 150px;
-  height: auto;
-  box-shadow: 1px 1px 5px black ,
-  -2px -2px 10px rgb(238, 210, 243);
-  border-radius: 1rem;
-}
-
-#main-nav hr {
-  width: auto;
-}
-
-#main-nav div {
-  display: block;
-  text-align: center;
-  font-size: 22px;
+  top: 0;
+  right: 0;
+  margin: 20px 60px;
+  width: 400px;
 }
 
 #main-nav ul#main {
-  padding-left: 30px;
-  gap: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: flex-start;
-}
-
-#main-nav li::before {
-  content:'-';
-  font-size: 25px;
-  margin-right: 5px;
 }
 
 #nav-toggle {
