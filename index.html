@@ -61,9 +61,9 @@
           <span>(she/her)</span>
         </div>
         <h2>web developer, musician</h2>
+        <div id='backsplash'></div>
       </div>
     </section>
-    <div id='backsplash'></div>
   
     
     <section id='about'>
@@ -129,21 +129,24 @@
         <h2>projects</h2>
       </div>
 
-      <div id='sort-backsplash'></div>
-      <div class='sort-container'>
-        <div class='wrapper'>
-          <input type="radio" id="html" name="sort-projects" value="HTML/CSS">
-          <label for="html">HTML/CSS</label>
+      <fieldset>
+        <div id='sort-backsplash'></div>
+        <legend>Sort Projects</legend>
+        <div class='sort-container'>
+          <div class='wrapper'>
+            <input type="radio" id="html" name="sort-projects" value="HTML/CSS">
+            <label for="html">HTML/CSS</label>
+          </div>
+          <div class='wrapper'>
+            <input type="radio" id="javascript" name="sort-projects" value="javascript">
+            <label for="javascript">javascript</label>
+          </div>
+          <div class='wrapper'>
+            <input type="radio" id="all" name="sort-projects" value="all" checked>
+            <label for="all">all</label> 
+          </div>
         </div>
-        <div class='wrapper'>
-          <input type="radio" id="javascript" name="sort-projects" value="javascript">
-          <label for="javascript">javascript</label>
-        </div>
-        <div class='wrapper'>
-          <input type="radio" id="all" name="sort-projects" value="all" checked>
-          <label for="all">all</label> 
-        </div>
-      </div>
+      </fieldset>
 
       <div id='projects-container'>
 
