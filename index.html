@@ -13,6 +13,18 @@
 </head>
 
 <body>
+  <div id='top-bar'>
+    <form>
+      <input id='animation-toggle' type='checkbox' name='animation-toggle' value='animation' >
+      <label id='stop-animation' for='animation-toggle'>stop animations</label>
+    </form>
+
+    <form>
+      <input id='dark-mode' type='checkbox'>
+      <label for='dark-mode'>dark mode</label>
+    </form>
+  </div>
+
   <header>
     <div id='logo-group'>
       <div id='logo'>
@@ -32,24 +44,13 @@
       </ul>
     </nav>
 
-    <!-- POP UP NAVIGATION-->
-    <div>
-      <button style='display:none' id='nav-toggle' aria-label='toggle navigation'>
-        <span id='hamburger'></span>
-      </button>
-    </div>
-
-    <nav style='display:none' class='smaller-screen-nav' style='display:none' role="navigation" aria-expanded='false'>
-      <ul>
-        <li><a href='#about'>about</a></li>
-        <li><a href='#skills'>skills</a></li>
-        <li><a href='#projects'>projects</a></li>
-      </ul>
-    </nav>
-
   </header>
 
   <main>
+    <div id='back-to-top'>
+      <div id='arrow'></div>
+      <a href='#'>back to top</a>
+    </div>
 
     <section id='hero'>
       <div>
@@ -58,10 +59,10 @@
       <div class='hero-text'>
         <div>
           <h1>Emma Grey</h1>
-          <span>(she/her)</span>
+          <span>(she/they)</span>
         </div>
         <h2>web developer, musician</h2>
-        <div id='backsplash'></div>
+        <div id='hero-colorblock'></div>
       </div>
     </section>
   
@@ -102,7 +103,7 @@
         
         <div class='group'>
           <img src="https://img.icons8.com/color/240/000000/html-5--v1.png" alt='HTML icon'/>
-          <h3>HTML3</h3>
+          <h3>HTML5</h3>
         </div>
 
         <div class='group'>
@@ -134,15 +135,15 @@
         <legend>Sort Projects</legend>
         <div class='sort-container'>
           <div class='wrapper'>
-            <input type="radio" id="html" name="sort-projects" value="HTML/CSS">
+            <input class='sort'  type="radio" id="html" name="sort-projects" value="HTML/CSS">
             <label for="html">HTML/CSS</label>
           </div>
           <div class='wrapper'>
-            <input type="radio" id="javascript" name="sort-projects" value="javascript">
+            <input class='sort' type="radio" id="javascript" name="sort-projects" value="javascript">
             <label for="javascript">javascript</label>
           </div>
           <div class='wrapper'>
-            <input type="radio" id="all" name="sort-projects" value="all" checked>
+            <input class='sort' type="radio" id="all" name="sort-projects" value="all" checked>
             <label for="all">all</label> 
           </div>
         </div>
@@ -312,10 +313,13 @@
 
       </div>
 
-
     </section>
 
   </main>
+
+  <footer>
+    <div>&copy; Emma Grey</div>
+  </footer>
 
   
 </body>

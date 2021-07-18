@@ -1,11 +1,13 @@
 const toggleNav = document.querySelector('#nav-toggle');
 const body = document.querySelector('body');
 const nav = document.querySelector('.smaller-screen-nav');
-const input = document.querySelectorAll('input');
+const input = document.querySelectorAll('.sort');
 const projects = document.querySelectorAll('.item');
 const htmls = document.querySelectorAll('.HTML');
 const javascripts = document.querySelectorAll('.Javascript');
 const linkContainers = document.querySelectorAll('.project-links');
+const darkMode = document.querySelector('#dark-mode');
+const animation = document.querySelector('#animation-toggle');
 
 
 const outlineCurrentItem = (e) => {
@@ -16,7 +18,7 @@ const outlineCurrentItem = (e) => {
       currentProject = project;
     }
   })
-  currentProject.style.border = '4px solid var(--dark-color)';
+  currentProject.style.border = '2px solid var(--dark-color)';
 }
 
 const removeOutline = (e) => {
@@ -30,6 +32,18 @@ const removeOutline = (e) => {
   currentProject.style.border = 'none';
 }
 
+const toggleDarkMode = (e) => {
+  console.log(e.target.checked);
+  if (e.target.checked) {
+    body.classList.add('dark-mode');
+  } else {
+    body.classList.remove('dark-mode');
+  }
+}
+
+darkMode.addEventListener('change', toggleDarkMode);
+
+
 
 linkContainers.forEach(container => {
   const links = container.querySelectorAll('a');
@@ -37,23 +51,11 @@ linkContainers.forEach(container => {
   links.forEach(link => link.addEventListener('blur', removeOutline));
 });
 
-const openNav = () => {
-  body.classList.toggle('nav-open');
-  let ariaExpanded = nav.attributes[1].value;
-  if (ariaExpanded == 'false') {
-    nav.attributes[1].value = true;
-  } else {
-    nav.attributes[1].value = false;
-  }
-}
-
 document.addEventListener('click', event => {
   if (event.target.matches('button')) {
     event.target.focus()
   }
 })
-
-toggleNav.addEventListener('click', openNav);
 
 const sortProjects = (e) => {
   let language = e.target.id;

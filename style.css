@@ -1,7 +1,8 @@
 :root {
   --accent-color: #74c969;
   --blue-accent-color: rgb(62, 154, 177);
-  --dark-color: #40024d;
+  --dark-color: #571E5E;
+  --dark-color-dim: #571e5eb6;
   --light-color: rgb(247, 221, 255);
 }
 
@@ -19,6 +20,10 @@ body {
   z-index: -1000000000;
 }
 
+#about, #skills, #projects {
+  background-color: inherit;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family:'Londrina Solid', cursive;
   margin: 0;
@@ -31,6 +36,7 @@ p {
 a {
   display: inline-block;
   font-size: 22px;
+  text-decoration: none;
 }
 
 a:link {
@@ -38,7 +44,7 @@ a:link {
 }
 
 a:focus, button:focus {
-  outline: 4px dashed rgb(14, 3, 119);
+  outline: 1px dashed black;
   transform: scale(1.1);
   transition: transform 200ms ease-in;
 }
@@ -47,12 +53,16 @@ a:visited, button:visited {
   color: gray;
 }
 
+body.dark-mode a:hover, body.dark-mode button:hover {
+  color: #b4fdaa;
+}
+
 a:hover, button:hover {
-  color: red;
+  color: var(--accent-color);
 }
 
 a:active, button:active {
-  color: blue;
+  color: var(--blue-accent-color);
 }
 
 h1 {
@@ -63,6 +73,77 @@ h2 {
   font-size: 2.5rem;
 }
 
+/* TOP BAR SECTION*/
+
+#top-bar, footer {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  background-color: #41024dad;
+  color: white;
+  display: flex;
+  justify-content: center;
+  z-index: 9999999999999999999;
+}
+
+#top-bar form {
+  margin: 5px 30px;
+}
+
+#top-bar form label {
+  font-size: 16px;
+}
+
+input[type='checkbox'] {
+  position: absolute;
+}
+
+input[type='checkbox'] + label {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+label::before {
+  margin-right: 5px;
+}
+
+input[type='checkbox'] + label::before {
+  content:'';
+  display: inline-block;
+  width: 50px;
+  height: 30px;
+  background-color: var(--blue-accent-color);
+  border-radius: 3rem;
+}
+
+input[type='checkbox'] + label::after {
+  content:'';
+  position: absolute;
+  left: 3px;
+  bottom: 3px;
+  width: 24px;
+  height: 24px;
+  border-radius: 3rem;
+  background-color: var(--accent-color);
+  transition: left 300ms linear;
+}
+
+input[type='checkbox']:checked + label::after {
+  left: 23px;
+}
+
+.dark-mode {
+  background-color: var(--dark-color-dim);
+  color: white;
+}
+
+body.dark-mode a, body.dark-mode button, hr {
+  color: rgb(252, 204, 253);
+}
+
+/* HEADER SECTION */
+
 header {
   position: relative;
   width: 100%;
@@ -70,6 +151,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 40px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.486);
 }
 
 #logo-group {
@@ -83,7 +166,7 @@ header {
 }
 
 #logo a img {
-  width: 100px;
+  width: 70px;
   max-width: 100%;
   height: auto;
 }
@@ -95,98 +178,19 @@ header {
 }
 
 #main-nav {
-  position: absolute;
-  top: 0;
-  right: 0;
   margin: 20px 60px;
-  width: 400px;
+  width: 500px;
 }
 
 #main-nav ul#main {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-start;
-}
-
-#nav-toggle {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  cursor: pointer;
-  width: 4rem;
-  height: 3rem;
-  background: transparent;
-  border: none;
-  padding: 1rem;
-  z-index: 10000;
-}
-
-#hamburger, #hamburger::before, #hamburger::after {
-  position: relative;
-  display: block;
-  width: 2rem;
-  height: 3px;
-  background-color: var(--accent-color);
-  transition: transform 500ms ease-in;
-}
-
-#hamburger::before, #hamburger::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-}
-
-#hamburger::after {
-  bottom: 8px;
-}
-
-#hamburger::before {
-  top: 8px;
-}
-
-.nav-open #hamburger::after {
-  opacity: 0;
-}
-
-.nav-open #hamburger::before {
-  transform: rotate(90deg) translateX(-7px);
-}
-
-.nav-open #hamburger {
-  transform: rotate(.625turn) translateX(5px);
-}
-
-.smaller-screen-nav {
-  position: fixed;
-  top:0;
-  bottom:0;
-  left:0;
-  right:0;
-  background-color: var(--light-color);
-  transform: translateX(100%);
-  transition: transform 500ms ease-in;
-  z-index: 9999;
-}
-
-.nav-open .smaller-screen-nav {
-  transform: translateX(0);
-}
-
-.smaller-screen-nav ul, #main-nav ul {
   height: 100%;
   list-style: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
 }
 
-.smaller-screen-nav ul a {
-  text-decoration: none;
-  font-size: 5rem;
-}
+/* HERO SECTION */
 
 #hero {
   margin: 80px 0;
@@ -231,14 +235,73 @@ header {
   color: white;
 }
 
-#backsplash {
+#hero-colorblock {
   position: absolute;
   right: 0;
   width: 80%;
-  top: 495px;
+  top: 513px;
   height: 60px;
   background-color: var(--accent-color);
   z-index: -9999;
+}
+
+/* BACK TO TOP BUTTON */
+
+#back-to-top {
+  font-family: 'Londrina Solid', cursive;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  text-align: center;
+  margin: 40px 20px;
+  z-index: 999999999999999999999;
+}
+
+#arrow {
+  content:'';
+  display: flex;
+  position: relative;
+  bottom: 5px;
+  justify-content: center;
+  margin: auto;
+  width: 0;
+  height: 0; 
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid black;
+}
+
+@keyframes bounce {
+  from {
+    bottom: 5px;
+  }
+
+  75% {
+    bottom: 15px;
+  }
+
+  to {
+    bottom: 5px;
+  }
+}
+
+#back-to-top:hover #arrow{
+  animation-name: bounce;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+/* ABOUT SECTION */
+
+#about {
+  display: block;
+  margin: auto;
+  position: relative;
+}
+
+body.dark-mode #about-text-container {
+  background-color: #875E8C;
 }
 
 #about-text-container {
@@ -248,7 +311,7 @@ header {
   width: 40%;
   margin: 300px auto;
   box-shadow: 2px 2px 5px black,
-  -2px -2px 10px rgb(238, 210, 243);
+  -2px -2px 5px rgb(238, 210, 243);
   border-radius: 1rem;
   z-index: -1000;
 }
@@ -256,7 +319,7 @@ header {
 #about-colorblock {
   position: absolute;
   left:0;
-  bottom: -58px;
+  top: 45px;
   width: 80%;
   height: 60px;
   background-color: var(--blue-accent-color);
@@ -278,7 +341,7 @@ header {
 #about div img {
   position: absolute;
   right: 200px;
-  top: 1200px;
+  top: 250px;
   width: 400px;
   z-index: -1001;
 }
@@ -297,15 +360,17 @@ header {
 
 .visually-hidden {
   position: absolute;
-  width: 1px;
+  width: 0;
   border: 0;
   overflow: hidden;
 }
 
+/* SKILLS SECTION */
+
 #skills, #projects {
   width: 50%;
   box-shadow: 2px 2px 5px black,
-  -2px -2px 10px rgb(238, 210, 243);
+  -2px -2px 5px rgb(238, 210, 243);
   margin: 100px auto;
   border-radius: 1rem;
 }
@@ -488,4 +553,11 @@ input[type='radio']:focus + label::before {
 
 input[type='radio']:hover + label::before {
   background-color:rgb(14, 3, 119);
+}
+
+/* FOOTER */
+
+footer div {
+  font-size: 16px;
+  padding: 5px;
 }
