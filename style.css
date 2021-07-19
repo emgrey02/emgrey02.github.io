@@ -306,7 +306,7 @@ body.dark-mode #about-text-container {
 
 #about-text-container {
   background-color: var(--light-color);
-  height: fit-content;
+  height: auto;
   padding: 50px;
   width: 40%;
   margin: 300px auto;
