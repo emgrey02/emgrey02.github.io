@@ -96,6 +96,7 @@ h2 {
 
 input[type='checkbox'] {
   position: absolute;
+  opacity: 0;
 }
 
 input[type='checkbox'] + label {
@@ -103,6 +104,7 @@ input[type='checkbox'] + label {
   display: flex;
   align-items: center;
 }
+
 
 label::before {
   margin-right: 5px;
@@ -115,6 +117,10 @@ input[type='checkbox'] + label::before {
   height: 30px;
   background-color: var(--blue-accent-color);
   border-radius: 3rem;
+}
+
+input[type='checkbox']:focus + label {
+  outline: 1px dashed yellow;
 }
 
 input[type='checkbox'] + label::after {
