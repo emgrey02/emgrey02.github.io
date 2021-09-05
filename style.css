@@ -2,7 +2,7 @@
   --accent-color: #74c969;
   --blue-accent-color: rgb(62, 154, 177);
   --dark-color: #571E5E;
-  --dark-color-dim: #571e5eb6;
+  --dark-color-dim: #571e5ec7;
   --light-color: rgb(247, 221, 255);
 }
 
@@ -145,7 +145,7 @@ input[type='checkbox']:checked + label::after {
 }
 
 body.dark-mode a, body.dark-mode button, hr {
-  color: rgb(252, 204, 253);
+  color: rgb(250, 231, 250);
 }
 
 /* HEADER SECTION */
@@ -183,7 +183,12 @@ header {
   color: var(--dark-color);
 }
 
+body.dark-mode #header-name {
+  color: rgba(255, 255, 255, 0.76);
+}
+
 #main-nav {
+  font-family:'Londrina Solid', cursive;
   margin: 20px 60px;
   width: 500px;
 }
@@ -194,6 +199,10 @@ header {
   justify-content: space-between;
   height: 100%;
   list-style: none;
+}
+
+#main-nav ul li a{
+  font-size: 26px
 }
 
 /* HERO SECTION */
@@ -212,7 +221,6 @@ header {
   box-shadow: 
     3px 3px 15px var(--dark-color),
     -3px -3px 20px var(--dark-color);
-  filter: grayscale(60%);
 }
 
 .hero-text {
@@ -238,14 +246,14 @@ header {
   align-self: flex-end;
   margin-top: 80px;
   font-family: Faustina, serif;
-  color: white;
+  color: black;
 }
 
 #hero-colorblock {
   position: absolute;
   right: 0;
   width: 80%;
-  top: 513px;
+  top: 440px;
   height: 60px;
   background-color: var(--accent-color);
   z-index: -9999;
@@ -307,7 +315,7 @@ header {
 }
 
 body.dark-mode #about-text-container {
-  background-color: #875E8C;
+  background-color: #7B4F81;
 }
 
 #about-text-container {
