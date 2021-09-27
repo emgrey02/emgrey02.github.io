@@ -79,13 +79,14 @@ nav ul {
 
 #pop-up {
   display: none;
-  position: absolute;
+  position: fixed;
   width: 80%;
   height: 50%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: var(--blue);
+  z-index: 2;
 }
 
 #pop-up:target {
@@ -126,7 +127,8 @@ h3 {
 
 img {
   display: block;
-  max-width: 70%;
+  width: 300px;
+  max-width: 100%;
   margin: auto;
   box-shadow: -10px 10px 0px var(--pink);
 }
