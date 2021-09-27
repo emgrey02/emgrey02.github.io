@@ -92,12 +92,17 @@ nav ul {
   display: block;
 }
 
-h1 {
+h1,
+h2,
+h3 {
   font-family: "Shadows Into Light", serif;
+  color: black;
+}
+
+h1 {
   font-size: 120px;
   line-height: 1.2;
   margin: 20px;
-  color: black;
   background-color: var(--green);
   border-top-right-radius: 0.8em;
   border-bottom-left-radius: 0.8em;
@@ -105,19 +110,25 @@ h1 {
 }
 
 h2 {
-  font-family: "Shadows Into Light", serif;
   text-transform: uppercase;
-  color: black;
   padding: 10px 30px;
   background-color: var(--yellow);
+  border-top-left-radius: 0.8em;
+  border-bottom-right-radius: 0.8em;
   width: fit-content;
 }
 
+h3 {
+  width: 100%;
+  background-color: var(--pink);
+  text-align: center;
+}
+
 img {
-  border-radius: 50%;
-  border: 5px solid var(--blue);
-  max-width: 100%;
-  width: 80%;
+  display: block;
+  max-width: 70%;
+  margin: auto;
+  box-shadow: -10px 10px 0px var(--pink);
 }
 
 #hero {
@@ -157,4 +168,21 @@ img {
 
 .about-paragraphs {
   padding: 20px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 520px;
+}
+
+.project-links {
+  text-align: center;
+  margin: 20px auto;
+  width: 150px;
+}
+
+.project-links a {
+  margin: 5px;
 }
