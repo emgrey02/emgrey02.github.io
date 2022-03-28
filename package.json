@@ -1,0 +1,25 @@
+{
+  "name": "emgrey02.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "source": "src/index.html",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "rm -f dist/* && parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emgrey02/emgrey02.github.io.git"
+  },
+  "author": "Emma Grey <emgrey02@gmail.com> (https://github.com/emgrey02)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/emgrey02/emgrey02.github.io/issues"
+  },
+  "homepage": "https://github.com/emgrey02/emgrey02.github.io#readme",
+  "dependencies": {
+    "@parcel/transformer-sass": "^2.4.0",
+    "parcel": "^2.4.0",
+    "sass": "^1.49.9"
+  }
+}
