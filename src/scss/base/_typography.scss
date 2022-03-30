@@ -1,0 +1,50 @@
+
+@font-face {
+    font-family: "Khula";
+    src: url('../fonts/Khula\ Light\ 300.ttf') format('truetype'),
+    url('../fonts/Khula\ Regular\ 400.ttf') format('truetype'),
+    url('../fonts/Khula\ SemiBold\ 600.ttf') format('truetype'),
+    url('../fonts/Khula\ Bold\ 700.ttf') format('truetype'),
+    url('../fonts/Khula\ ExtraBold\ 800.ttf') format('truetype');
+    font-weight: 300 400 600 700 800;
+}
+
+$font: "Khula", sans-serif;
+
+/* font sizing */
+$font-size-100: clamp(16px, 2vw, 18px);
+$font-size-200: clamp(20px, 3vw, 24px);
+$font-size-300: clamp(24px, 3vw, 28px);
+$font-size-400: clamp(30px, 3vw, 34px);
+$font-size-500: clamp(40px, 4vw, 44px);
+$font-size-700: clamp(50px, 5vw, 60px);
+
+h1 {
+    font-size: $font-size-700;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.215em;
+}
+
+h2 {
+    font-size: $font-size-500;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: $font-size-300;
+    font-weight: 300;
+}
+
+.nav__item {
+    font-size: $font-size-200;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.215em;
+}
+
+p {
+    font-size: $font-size-100;
+    font-weight: 400;
+}

@@ -1,0 +1,24 @@
+@use '../base/typography' as type;
+@use '../components/big-arrow';
+
+.about {
+    margin-block-start: 8rem;
+    display: grid;
+    place-items: center;
+
+    &__image {
+        max-width: 100%;
+    }
+
+    &__tidbit {
+        padding-block: 1rem 2rem;
+    }
+
+    &__container {
+        margin-inline: 1rem;
+
+        &--para {
+            margin-block-end: 1rem;
+        }
+    }
+}

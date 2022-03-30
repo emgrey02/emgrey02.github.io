@@ -1,0 +1,21 @@
+
+.big-arrow {
+    position: absolute;
+    inset-inline-end: 0;
+    margin-inline-end: 10rem;
+
+    &__path {
+        stroke-dasharray: 360;
+        stroke-dashoffset: 360;
+
+        @media (prefers-reduced-motion: no-preference) {
+            animation: dash 1s ease-in forwards;
+        }
+    }
+
+    @keyframes dash {
+        to {
+            stroke-dashoffset: 0;
+        }
+    }
+}

@@ -1,0 +1,10 @@
+@use './base/reset';
+@use './utilities/variables' as var;
+@use './base/typography' as type;
+@use './layout/header';
+@use './layout/about';
+
+body {
+    background-color: var.$main-100;
+    font-family: type.$font;
+}
