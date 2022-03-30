@@ -4,6 +4,10 @@
     inset-inline-end: 0;
     margin-inline-end: 10rem;
 
+    @media (max-width: 1400px) {
+        display: none;
+    }
+
     &__path {
         stroke-dasharray: 360;
         stroke-dashoffset: 360;
