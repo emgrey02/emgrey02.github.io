@@ -1,8 +1,9 @@
 
 .big-arrow {
     position: absolute;
-    inset-inline-end: 0;
-    margin-inline-end: 10rem;
+    height: 150px;
+    inset-block-start: 500px;
+    inset-inline-end: 20%;
 
     @media (max-width: 1400px) {
         display: none;
