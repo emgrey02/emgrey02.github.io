@@ -63,6 +63,8 @@
 }
 
 .moving {
+    animation: glide 5s cubic-bezier(0.23, 0.36, 0.28, 0.83) 1;
+    
     @media (prefers-reduced-motion: no-preference) {
         animation: glide 3.5s cubic-bezier(0.23, 0.36, 0.28, 0.83) 1;
     }

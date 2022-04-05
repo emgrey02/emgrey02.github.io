@@ -1,0 +1,133 @@
+@use '../utilities/variables' as *;
+@use '../base/typography' as type;
+
+.projects {
+    display: grid;
+    margin-block-start: 8rem;
+    gap: 5rem;
+    max-width: 100%;
+
+    &__title {
+        width: min-content;
+        place-self: center;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 102%;
+            height: 80%;
+            transform: translateX(-1%);
+            background-color: $accent-400;
+            z-index: -1;
+        }
+    }
+}
+
+.project {
+
+    &__image-cont {
+        position: relative;
+        text-align: center;
+        margin-block-end: 3rem;
+
+        @media (min-width: 1000px) {
+            margin-block-end: 0;
+        }
+
+        &--platter {
+            position: absolute;
+            height: 80%;
+            width: 100%;
+            inset-block-start: 10%;
+            inset-inline-start: 0;
+            background-color: $main-200;
+            z-index: 0;
+
+            &.right {
+                border-top-left-radius: 200px;
+                border-bottom-left-radius: 200px;
+            }
+
+            &.left {
+                border-top-right-radius: 200px;
+                border-bottom-right-radius: 200px;
+            }
+        }
+
+        &--image {
+            position: relative;
+        }
+    }
+
+    &__words-cont {
+        margin-inline: 1rem;
+
+        &.right {
+            text-align: end;
+
+            @media (min-width: 1000px) {
+                grid-column: 1;
+                grid-row: 1;
+            }
+        }
+
+        &.left {
+            text-align: start;
+
+            @media (min-width: 1000px) {
+                grid-column: 2;
+                grid-row: 1;
+            }
+        }
+
+        &--title {
+            @media (min-width: 1000px) {
+                margin-inline-end: -4rem;
+            }
+        }
+
+
+        &--environment {
+            font-size: type.$font-size-400;
+            margin-block-end: 1.5rem;
+
+            @media (min-width: 1000px) {
+                margin-inline-end: -2rem;
+            }
+        }
+
+        &--description {
+            margin-block-end: 1.5rem;
+            position: relative;
+            max-width: 60ch;
+            margin-inline-start: auto;
+        }
+
+        &--link {
+            display: block;
+            text-transform: uppercase;
+            font-size: type.$font-size-300;
+
+            &:last-child {
+                @media (min-width: 1000px) {
+                    margin-inline-end: -4rem;
+                }
+            }
+
+            @media (min-width: 1000px) {
+                margin-inline-end: -2rem;
+            }
+        }
+
+        
+    }
+
+    @media (min-width: 1000px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        align-items: center;
+    }
+}

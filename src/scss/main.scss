@@ -3,8 +3,10 @@
 @use './base/typography' as type;
 @use './layout/header';
 @use './layout/about';
+@use './layout/projects';
 
 body {
     background-color: var.$main-100;
     font-family: type.$font;
+    overflow-x: hidden;
 }
