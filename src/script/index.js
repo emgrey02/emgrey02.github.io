@@ -1,6 +1,7 @@
 const lines = document.querySelectorAll('.moving-lines__line');
-
-let isScrolling = false;
+const projects = document.querySelector('.projects');
+console.log(projects);
+const className = 'in-view';
 
 window.addEventListener('scroll', () => {
     lines.forEach((line) => {
@@ -14,3 +15,19 @@ lines.forEach((line) => {
     })
 })
 
+projects.classList.remove(className);
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add(className) 
+            return;
+        }
+        entry.target.classList.remove(className);
+    });
+},
+{
+    threshold: .25
+});
+
+observer.observe(projects);
