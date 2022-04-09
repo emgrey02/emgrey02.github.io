@@ -27,7 +27,7 @@ const observer = new IntersectionObserver(entries => {
     });
 },
 {
-    threshold: .1
+    threshold: .3
 });
 
 observer.observe(projects);
