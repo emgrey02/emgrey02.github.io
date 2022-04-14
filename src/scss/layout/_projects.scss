@@ -26,29 +26,55 @@
         }
     }
 
-    @for $i from 1 through 4 {
-        .project:nth-child(#{$i+1}) {
-            @media (prefers-reduced-motion: no-preference) {
-                transition: transform 600ms var(--ease-in-out-1), opacity 600ms var(--ease-in-out-1);
-            }
-        }
-    }
-
     .project.right {
-        transform: translateX(100%);
+        transform: translateX(10px);
 
         &.in-view {
-            opacity: 1;
-            transform: translateX(0px);
+            animation: enter-from-right 1s ease-in-out normal forwards;
         }
     }
 
     .project.left {
-        transform: translateX(-100%);
+        transform: translateX(-10px);
         
         &.in-view {
-            opacity: 1;
+            animation: enter-from-left 1s ease-in-out normal forwards;
+        }
+    }
+
+    @keyframes enter-from-right{
+        0% {
+            opacity: 0.5;
+            transform: translateX(10px);
+        }
+        50% {
             transform: translateX(0px);
+        }
+        70% {
+            opacity: 1;
+            transform: translateY(2px) skewX(-.5deg);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+
+    @keyframes enter-from-left {
+        0% {
+            opacity: .5;
+            transform: translateX(-10px);
+        }
+        50% {
+            transform: translateX(0px);
+        }
+        70% {
+            opacity: 1;
+            transform: translateY(2px) skewX(.5deg);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0px);
         }
     }
     
