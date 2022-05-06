@@ -1,26 +1,25 @@
-
 .big-arrow {
-    position: absolute;
-    height: 150px;
-    inset-block-start: 500px;
-    inset-inline-end: 20%;
+  position: absolute;
+  height: 150px;
+  inset-block-start: 500px;
+  inset-inline-end: 20%;
 
-    @media (max-width: 1400px) {
-        display: none;
+  @media (max-width: 1400px) {
+    display: none;
+  }
+
+  &__path {
+    stroke-dasharray: 360;
+    stroke-dashoffset: 360;
+
+    @media (prefers-reduced-motion: no-preference) {
+      animation: dash 1s ease-in forwards;
     }
+  }
 
-    &__path {
-        stroke-dasharray: 360;
-        stroke-dashoffset: 360;
-
-        @media (prefers-reduced-motion: no-preference) {
-            animation: dash 1s ease-in forwards;
-        }
+  @keyframes dash {
+    to {
+      stroke-dashoffset: 0;
     }
-
-    @keyframes dash {
-        to {
-            stroke-dashoffset: 0;
-        }
-    }
+  }
 }

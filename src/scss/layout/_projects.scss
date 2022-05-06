@@ -3,200 +3,203 @@
 @use '../utilities/mixins' as mixin;
 
 .projects {
-    display: grid;
-    margin-block-start: 8rem;
-    gap: 5rem;
-    max-width: 100%;
-    overflow-x: hidden;
+  display: grid;
+  margin-block-start: 8rem;
+  gap: 4rem;
+  max-width: 100%;
+  overflow-x: hidden;
 
-    &__title {
-        width: min-content;
-        place-self: center;
-        position: relative;
+  &__title {
+    width: min-content;
+    place-self: center;
+    position: relative;
 
-        &::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            width: 102%;
-            height: 80%;
-            transform: translateX(-1%);
-            background-color: $accent-400;
-            z-index: -1;
-        }
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 102%;
+      height: 80%;
+      transform: translateX(-1%);
+      background-color: $accent-400;
+      z-index: -1;
+    }
+  }
+
+  .project.right {
+    transform: translateX(10px);
+
+    &.in-view {
+      animation: enter-from-right 1s var(--ease-in-out-3) normal forwards;
+    }
+  }
+
+  .project.left {
+    transform: translateX(-10px);
+
+    &.in-view {
+      animation: enter-from-left 1s var(--ease-in-out-1) normal forwards;
+    }
+  }
+
+  @keyframes enter-from-right {
+    0% {
+      opacity: 0.5;
+      transform: translateX(10px);
     }
 
-    .project.right {
-        transform: translateX(10px);
-
-        &.in-view {
-            animation: enter-from-right 1s var(--ease-in-out-3) normal forwards;
-        }
+    50% {
+      transform: translateX(0px);
     }
 
-    .project.left {
-        transform: translateX(-10px);
-        
-        &.in-view {
-            animation: enter-from-left 1s var(--ease-in-out-1) normal forwards;
-        }
+    70% {
+      opacity: 1;
+      transform: translateY(2px) skewX(.5deg);
     }
 
-    @keyframes enter-from-right{
-        0% {
-            opacity: 0.5;
-            transform: translateX(10px);
-        }
-        50% {
-            transform: translateX(0px);
-        }
-        70% {
-            opacity: 1;
-            transform: translateY(2px) skewX(.5deg);
-        }
-        100% {
-            opacity: 1;
-            transform: translateY(0px);
-        }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+
+  @keyframes enter-from-left {
+    0% {
+      opacity: .5;
+      transform: translateX(-10px);
     }
 
-    @keyframes enter-from-left {
-        0% {
-            opacity: .5;
-            transform: translateX(-10px);
-        }
-        50% {
-            transform: translateX(0px);
-        }
-        70% {
-            opacity: 1;
-            transform: translateY(2px) skewX(.5deg);
-        }
-        100% {
-            opacity: 1;
-            transform: translateY(0px);
-        }
+    50% {
+      transform: translateX(0px);
     }
-    
-    
+
+    70% {
+      opacity: 1;
+      transform: translateY(2px) skewX(.5deg);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+
+
 }
 
 
 .project {
-    margin-block: 3em;
-    opacity: 0;
+  margin-block: 3em;
+  opacity: 0;
 
-    &__image-cont {
-        position: relative;
-        text-align: center;
-        margin-block-end: 3rem;
-
-        @media (min-width: 1000px) {
-            margin-block-end: 0;
-        }
-
-        &--platter {
-            position: absolute;
-            height: 80%;
-            width: 100%;
-            inset-block-start: 10%;
-            inset-inline-start: 0;
-            background-color: $main-200;
-            z-index: 0;
-        }
-
-        &--image {
-            position: relative;
-        }
-    }
-
-    &__words-cont {
-        margin-inline: 1rem;
-
-        &--environment {
-            font-size: type.$font-size-400;
-            margin-block-end: 1.5rem;
-
-        }
-
-        &--description {
-            margin-block-end: 1.5rem;
-            position: relative;
-            max-width: 60ch;
-        }
-
-        &--first-link,
-        &--second-link {
-            display: block;
-            text-transform: uppercase;
-            font-size: type.$font-size-300;
-        }
-        
-    }
+  &__image-cont {
+    position: relative;
+    text-align: center;
+    margin-block-end: 3rem;
 
     @media (min-width: 1000px) {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
-        align-items: center;
+      margin-block-end: 0;
     }
+
+    &--platter {
+      position: absolute;
+      height: 80%;
+      width: 100%;
+      inset-block-start: 10%;
+      inset-inline-start: 0;
+      background-color: $main-200;
+      z-index: 0;
+    }
+
+    &--image {
+      position: relative;
+    }
+  }
+
+  &__words-cont {
+    margin-inline: 1rem;
+
+    &--environment {
+      font-size: type.$font-size-400;
+      margin-block-end: 1.5rem;
+
+    }
+
+    &--description {
+      margin-block-end: 1.5rem;
+      position: relative;
+      max-width: 60ch;
+    }
+
+    &--first-link,
+    &--second-link {
+      display: block;
+      text-transform: uppercase;
+      font-size: type.$font-size-300;
+    }
+
+  }
+
+  @media (min-width: 1000px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+  }
 }
 
-@each $section, $offset in mixin.$wordSpacing {
-    .project.right {
+@each $section,
+$offset in mixin.$wordSpacing {
+  .project.right {
 
-        .project__image-cont--platter {
-            border-top-left-radius: 200px;
-            border-bottom-left-radius: 200px;
-        }
-
-        .project__words-cont {
-            text-align: end;
-
-            @media (min-width: 1000px) {
-                grid-column: 1;
-                grid-row: 1;
-            }
-
-            &--#{$section} {
-                @media (min-width: 1000px) {
-                    margin-inline-end: $offset;
-                }
-            }
-
-            &--description {
-                margin-inline-start: auto;
-            }
-        }
+    .project__image-cont--platter {
+      border-top-left-radius: 200px;
+      border-bottom-left-radius: 200px;
     }
 
-    .project.left {
-        .project__image-cont--platter {
-            border-top-right-radius: 200px;
-            border-bottom-right-radius: 200px;
+    .project__words-cont {
+      text-align: end;
+
+      @media (min-width: 1000px) {
+        grid-column: 1;
+        grid-row: 1;
+      }
+
+      &--#{$section} {
+        @media (min-width: 1000px) {
+          margin-inline-end: $offset;
         }
+      }
 
-        .project__words-cont {
-            text-align: start;
-
-            @media (min-width: 1000px) {
-                grid-column: 2;
-                grid-row: 1;
-            }
-            
-            &--#{$section} {
-                @media (min-width: 1000px) {
-                    margin-inline-start: $offset;
-                }
-            }
-
-            &--description {
-                margin-inline-end: auto;
-            }
-        }
+      &--description {
+        margin-inline-start: auto;
+      }
     }
+  }
+
+  .project.left {
+    .project__image-cont--platter {
+      border-top-right-radius: 200px;
+      border-bottom-right-radius: 200px;
+    }
+
+    .project__words-cont {
+      text-align: start;
+
+      @media (min-width: 1000px) {
+        grid-column: 2;
+        grid-row: 1;
+      }
+
+      &--#{$section} {
+        @media (min-width: 1000px) {
+          margin-inline-start: $offset;
+        }
+      }
+
+      &--description {
+        margin-inline-end: auto;
+      }
+    }
+  }
 }
-
-
-
-
