@@ -18,6 +18,19 @@ ul {
   padding-inline-start: 0;
 }
 
+input {
+  font-family: inherit;
+  padding: .25em 0.5em;
+  line-height: 1;
+  height: 2.25em;
+}
+
+textarea {
+  font-family: inherit;
+  resize: vertical;
+  padding: .3em;
+}
+
 //open-props easings
 :where(html) {
   --ease-1: cubic-bezier(.25, 0, .5, 1);

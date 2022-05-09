@@ -20,6 +20,19 @@ ul {
           padding-inline-start: 0;
 }
 
+input {
+  font-family: inherit;
+  padding: 0.25em 0.5em;
+  line-height: 1;
+  height: 2.25em;
+}
+
+textarea {
+  font-family: inherit;
+  resize: vertical;
+  padding: 0.3em;
+}
+
 :where(html) {
   --ease-1: cubic-bezier(.25, 0, .5, 1);
   --ease-2: cubic-bezier(.25, 0, .4, 1);
@@ -92,9 +105,21 @@ h3 {
   letter-spacing: 0.215em;
 }
 
-p {
+body {
   font-size: clamp(16px, 2vw, 18px);
   font-weight: 400;
+  line-height: 1.5;
+}
+
+label {
+  font-size: clamp(20px, 3vw, 24px);
+}
+
+input,
+textarea {
+  font-size: 16px;
+  font-size: max(16px, 1em);
+  line-height: 1.5;
 }
 
 @property --offset {
@@ -212,6 +237,7 @@ body {
   order: 2;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   padding-block: 2rem;
 }
 @media (min-width: 1000px) {
@@ -816,4 +842,83 @@ body {
 .project.left .project__words-cont--description {
   -webkit-margin-end: auto;
           margin-inline-end: auto;
+}
+
+fieldset {
+  border: none;
+  background-color: hsl(230deg, 18%, 80%);
+  border-radius: 0.5em;
+  padding: 2em 1em;
+}
+fieldset input + label {
+  -webkit-margin-before: 1em;
+          margin-block-start: 1em;
+}
+fieldset input, fieldset textarea {
+  border-radius: 0.5em;
+  border: 2px solid hsl(32deg, 100%, 76%);
+  transition: box-shadow 200ms east-in-out;
+}
+fieldset input:focus, fieldset textarea:focus {
+  border-color: hsl(32deg, 100%, 66%);
+  box-shadow: 0 0 0 3px hsl(32deg, 100%, 86%);
+  outline: 3px solid transparent;
+}
+
+form > input {
+  border-radius: 0.5em;
+  border: none;
+  padding: 0.5em 0.75em;
+  display: flex;
+  cursor: pointer;
+  background-color: hsl(235deg, 17%, 60%);
+  color: white;
+  transition: color 200ms, background-color 200ms, box-shadow 200ms;
+}
+form > input:hover {
+  background-color: hsl(32deg, 100%, 66%);
+  color: black;
+  box-shadow: 0 0 0 2px black;
+}
+form > input:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px black;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-block: 6rem;
+  padding-inline: 0.5em;
+}
+.contact h2 {
+  position: relative;
+  -webkit-margin-after: 3rem;
+          margin-block-end: 3rem;
+}
+.contact h2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 102%;
+  height: 80%;
+  transform: translateX(-1%);
+  background-color: hsl(32deg, 100%, 66%);
+  z-index: -1;
+}
+.contact__form {
+  display: grid;
+  gap: 1em;
+  width: 100%;
+  max-width: 65ch;
+}
+.contact__form fieldset {
+  display: grid;
+}
+.contact__form > input {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  justify-self: center;
 }/*# sourceMappingURL=main.css.map */

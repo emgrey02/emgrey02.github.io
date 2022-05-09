@@ -1,0 +1,47 @@
+@use '../utilities/variables' as var;
+
+fieldset {
+  border: none;
+  background-color: var.$main-200;
+  border-radius: .5em;
+  padding: 2em 1em;
+
+  & input+label {
+    margin-block-start: 1em;
+  }
+
+  & input,
+  & textarea {
+    border-radius: .5em;
+    border: 2px solid var.$accent-300;
+    transition: box-shadow 200ms east-in-out;
+
+    &:focus {
+      border-color: var.$accent-400;
+      box-shadow: 0 0 0 3px var.$accent-200;
+      outline: 3px solid transparent;
+    }
+  }
+}
+
+form>input {
+  border-radius: .5em;
+  border: none;
+  padding: .5em .75em;
+  display: flex;
+  cursor: pointer;
+  background-color: var.$main-400;
+  color: white;
+  transition: color 200ms, background-color 200ms, box-shadow 200ms;
+
+  &:hover {
+    background-color: var.$accent-400;
+    color: black;
+    box-shadow: 0 0 0 2px black;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px black;
+  }
+}
