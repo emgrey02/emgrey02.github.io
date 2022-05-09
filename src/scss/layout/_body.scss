@@ -1,0 +1,10 @@
+@use '../components/links';
+@use '../utilities/variables' as var;
+@use '../base/typography' as type;
+
+body {
+  color: #313131;
+  background-color: var.$main-100;
+  font-family: type.$font;
+  overflow-x: hidden;
+}

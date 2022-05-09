@@ -1,0 +1,54 @@
+@use '../utilities/variables' as var;
+
+@property --offset {
+  syntax: '<length>';
+  inherits: false;
+  initial-value: 2px;
+}
+
+a {
+  color: inherit;
+  text-decoration-style: underline;
+  text-decoration-thickness: .15em;
+  text-decoration-color: var.$accent-400;
+  text-underline-offset: var(--offset, .2em);
+  transition: --offset 300ms, text-decoration-color 300ms;
+
+  @supports not (background: paint(something)) {
+    transition: text-decoration-color 300ms, text-underline-offset 300ms;
+  }
+
+  &:hover {
+    --offset: 0.4em;
+    text-decoration-color: var.$accent-100;
+    color: black;
+
+    @supports not (background: paint(something)) {
+      text-underline-offset: 0.4em;
+    }
+  }
+}
+
+a[class] {
+  text-decoration: none;
+  position: relative;
+  width: fit-content;
+
+  &::after {
+    content: '';
+    width: 100%;
+    height: 1.3em;
+    display: block;
+    position: absolute;
+    inset-inline-start: 0;
+    inset-block-start: 0;
+    z-index: -1;
+    clip-path: inset(0 100% 0 0);
+    background-color: var.$accent-300;
+    transition: clip-path 300ms ease;
+  }
+
+  &:hover::after {
+    clip-path: inset(0 0 0 0);
+  }
+}
