@@ -1,3 +1,5 @@
+@use '../utilities/variables' as var;
+
 @font-face {
   font-family: "Khula";
   src: url('../src/fonts/Khula\ Light\ 300.ttf') format('truetype'),
@@ -10,53 +12,43 @@
 
 $font: "Khula", sans-serif;
 
-/* font sizing */
-$font-size-100: clamp(16px, 2vw, 18px);
-$font-size-200: clamp(20px, 3vw, 24px);
-$font-size-300: clamp(24px, 3vw, 28px);
-$font-size-400: clamp(30px, 3vw, 34px);
-$font-size-500: clamp(40px, 4vw, 44px);
-$font-size-700: clamp(50px, 5vw, 60px);
-
 h1 {
-  font-size: $font-size-700;
+  font-size: var.$step-4;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.215em;
 }
 
 h2 {
-  font-size: $font-size-500;
+  font-size: var.$step-3;
   font-weight: 800;
   text-transform: uppercase;
 }
 
 h3 {
-  font-size: $font-size-500;
+  font-size: var.$step-3;
   font-weight: 600;
   letter-spacing: .04em;
 }
 
 .nav__item {
-  font-size: $font-size-200;
+  font-size: var.$step-1;
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 0.215em;
 }
 
 body {
-  font-size: $font-size-100;
+  font-size: var.$step-0;
   font-weight: 400;
   line-height: 1.5;
 }
 
 label {
-  font-size: $font-size-200;
+  font-size: var.$step-1;
 }
 
 input,
 textarea {
-  font-size: 16px;
-  font-size: max(16px, 1em);
-  line-height: 1.5;
+  font-size: var.$step-0;
 }

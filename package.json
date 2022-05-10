@@ -18,6 +18,7 @@
 	},
 	"homepage": "https://github.com/emgrey02/emgrey02.github.io#readme",
 	"dependencies": {
+		"marx-css": "^4.0.1",
 		"sass": "^1.49.9"
 	}
 }

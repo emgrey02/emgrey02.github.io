@@ -1,16 +1,16 @@
 @use '../components/form';
-@use '../utilities/variables' as var;
+@use '../utilities/variables' as *;
 
 .contact {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-block: 6rem;
-  padding-inline: .5em;
+  margin-block-start: $space-l;
+  padding-inline: $space-2xs;
 
   h2 {
     position: relative;
-    margin-block-end: 3rem;
+    margin-block-end: $space-s;
 
     &::before {
       content: '';
@@ -19,7 +19,7 @@
       width: 102%;
       height: 80%;
       transform: translateX(-1%);
-      background-color: var.$accent-400;
+      background-color: $accent-400;
       z-index: -1;
     }
   }

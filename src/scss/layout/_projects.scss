@@ -1,11 +1,10 @@
 @use '../utilities/variables' as *;
-@use '../base/typography' as type;
 @use '../utilities/mixins' as mixin;
 
 .projects {
   display: grid;
-  margin-block-start: 8rem;
-  gap: 4rem;
+  margin-block-start: $space-l;
+  gap: $space-xs;
   max-width: 100%;
   overflow-x: hidden;
 
@@ -27,75 +26,36 @@
   }
 
   .project.right {
-    transform: translateX(10px);
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 500ms, transform 700ms $ease-elastic-5;
 
     &.in-view {
-      animation: enter-from-right 1s var(--ease-in-out-3) normal forwards;
+      opacity: 1;
+      transform: translateX(0);
     }
   }
 
   .project.left {
-    transform: translateX(-10px);
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 500ms, transform 700ms $ease-elastic-5;
 
     &.in-view {
-      animation: enter-from-left 1s var(--ease-in-out-1) normal forwards;
+      opacity: 1;
+      transform: translateX(0);
     }
   }
-
-  @keyframes enter-from-right {
-    0% {
-      opacity: 0.5;
-      transform: translateX(10px);
-    }
-
-    50% {
-      transform: translateX(0px);
-    }
-
-    70% {
-      opacity: 1;
-      transform: translateY(2px) skewX(.5deg);
-    }
-
-    100% {
-      opacity: 1;
-      transform: translateY(0px);
-    }
-  }
-
-  @keyframes enter-from-left {
-    0% {
-      opacity: .5;
-      transform: translateX(-10px);
-    }
-
-    50% {
-      transform: translateX(0px);
-    }
-
-    70% {
-      opacity: 1;
-      transform: translateY(2px) skewX(.5deg);
-    }
-
-    100% {
-      opacity: 1;
-      transform: translateY(0px);
-    }
-  }
-
-
 }
 
 
 .project {
-  margin-block: 3em;
   opacity: 0;
+  padding-block: $space-s;
 
   &__image-cont {
     position: relative;
     text-align: center;
-    margin-block-end: 3rem;
     z-index: -1;
 
     @media (min-width: 1000px) {
@@ -117,21 +77,24 @@
       box-shadow: 1px 1px 10px rgba(0, 0, 0, .3);
       border-radius: .5em;
       max-width: 100%;
-      margin-inline: .5em;
+      padding: .5em;
     }
   }
 
   &__words-cont {
-    margin-inline: 1rem;
+    margin-block-start: $space-s;
+    padding-inline: .5em;
+
+    @media (min-width: 1000px) {
+      margin-block-start: 0;
+    }
 
     &--environment {
-      font-size: type.$font-size-400;
-      margin-block-end: 1.5rem;
-
+      font-size: $step-1;
     }
 
     &--description {
-      margin-block-end: 1.5rem;
+      margin-block: $space-xs;
       position: relative;
       max-width: 60ch;
     }
@@ -141,7 +104,7 @@
       display: block;
       width: fit-content;
       text-transform: uppercase;
-      font-size: type.$font-size-300;
+      font-size: $step-1;
     }
 
   }
@@ -172,9 +135,10 @@ $offset in mixin.$wordSpacing {
       }
 
       &--#{$section} {
+        margin-inline-start: auto;
+
         @media (min-width: 1000px) {
           margin-inline-end: $offset;
-          margin-inline-start: auto;
         }
       }
 

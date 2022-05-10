@@ -1,8 +1,8 @@
-@use '../utilities/variables' as var;
+@use '../utilities/variables' as *;
 
 fieldset {
   border: none;
-  background-color: var.$main-200;
+  background-color: $main-200;
   border-radius: .5em;
   padding: 2em 1em;
 
@@ -12,13 +12,14 @@ fieldset {
 
   & input,
   & textarea {
+    background-color: $main-100;
     border-radius: .5em;
-    border: 2px solid var.$accent-300;
-    transition: box-shadow 200ms east-in-out;
+    border: 2px solid $accent-300;
+    transition: box-shadow 200ms ease-in-out;
 
     &:focus {
-      border-color: var.$accent-400;
-      box-shadow: 0 0 0 3px var.$accent-200;
+      border-color: $accent-400;
+      box-shadow: 0 0 0 3px $accent-200;
       outline: 3px solid transparent;
     }
   }
@@ -27,15 +28,15 @@ fieldset {
 form>input {
   border-radius: .5em;
   border: none;
-  padding: .5em .75em;
-  display: flex;
+  box-shadow: 0 0 0 0px rgba(0, 0, 0, 0);
+  padding: .7em .75em .5em;
   cursor: pointer;
-  background-color: var.$main-400;
+  background-color: $main-400;
   color: white;
   transition: color 200ms, background-color 200ms, box-shadow 200ms;
 
   &:hover {
-    background-color: var.$accent-400;
+    background-color: $accent-400;
     color: black;
     box-shadow: 0 0 0 2px black;
   }
@@ -44,4 +45,8 @@ form>input {
     outline: none;
     box-shadow: 0 0 0 4px black;
   }
+}
+
+input[type=submit] {
+  transition: color 200ms, background-color 200ms, box-shadow 200ms;
 }
