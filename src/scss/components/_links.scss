@@ -8,19 +8,19 @@
 
 a {
   color: inherit;
-  text-decoration-style: underline;
+  text-decoration: underline;
   text-decoration-thickness: .15em;
-  text-decoration-color: var.$accent-400;
+  text-decoration-color: black;
   text-underline-offset: var(--offset, .2em);
-  transition: --offset 300ms, text-decoration-color 300ms, box-shadow 300ms;
+  transition: --offset 300ms, color 300ms, text-decoration-color 300ms, box-shadow 300ms;
 
   @supports not (background: paint(something)) {
-    transition: text-decoration-color 300ms, text-underline-offset 300ms, box-shadow 300ms;
+    transition: text-decoration-color 300ms, color 300ms, text-underline-offset 300ms, box-shadow 300ms;
   }
 
   &:hover {
     --offset: 0.4em;
-    text-decoration-color: var.$accent-100;
+    text-decoration-color: var.$accent-400;
     color: black;
 
     @supports not (background: paint(something)) {
@@ -30,7 +30,7 @@ a {
 
   &:focus {
     outline: none;
-    box-shadow: 0 0 0 3px black;
+    box-shadow: 0 0 0 2px black;
   }
 }
 

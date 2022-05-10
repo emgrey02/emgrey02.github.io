@@ -391,25 +391,24 @@ textarea {
 }
 a {
   color: inherit;
-  -webkit-text-decoration-style: underline;
-          text-decoration-style: underline;
+  text-decoration: underline;
   text-decoration-thickness: 0.15em;
-  -webkit-text-decoration-color: hsl(32deg, 100%, 66%);
-          text-decoration-color: hsl(32deg, 100%, 66%);
+  -webkit-text-decoration-color: black;
+          text-decoration-color: black;
   text-underline-offset: var(--offset, 0.2em);
-  transition: --offset 300ms, text-decoration-color 300ms, box-shadow 300ms;
+  transition: --offset 300ms, color 300ms, text-decoration-color 300ms, box-shadow 300ms;
 }
 @supports not (background: paint(something)) {
   a {
-    transition: text-underline-offset 300ms, box-shadow 300ms, -webkit-text-decoration-color 300ms;
-    transition: text-decoration-color 300ms, text-underline-offset 300ms, box-shadow 300ms;
-    transition: text-decoration-color 300ms, text-underline-offset 300ms, box-shadow 300ms, -webkit-text-decoration-color 300ms;
+    transition: color 300ms, text-underline-offset 300ms, box-shadow 300ms, -webkit-text-decoration-color 300ms;
+    transition: text-decoration-color 300ms, color 300ms, text-underline-offset 300ms, box-shadow 300ms;
+    transition: text-decoration-color 300ms, color 300ms, text-underline-offset 300ms, box-shadow 300ms, -webkit-text-decoration-color 300ms;
   }
 }
 a:hover {
   --offset: 0.4em;
-  -webkit-text-decoration-color: hsl(33deg, 100%, 96%);
-          text-decoration-color: hsl(33deg, 100%, 96%);
+  -webkit-text-decoration-color: hsl(32deg, 100%, 66%);
+          text-decoration-color: hsl(32deg, 100%, 66%);
   color: black;
 }
 @supports not (background: paint(something)) {
@@ -419,7 +418,7 @@ a:hover {
 }
 a:focus {
   outline: none;
-  box-shadow: 0 0 0 3px black;
+  box-shadow: 0 0 0 2px black;
 }
 
 a[class] {
@@ -743,8 +742,7 @@ body {
   padding: 0.5em;
 }
 .project__words-cont {
-  -webkit-margin-before: clamp(1rem, 0.92rem + 0.39vw, 1.25rem);
-          margin-block-start: clamp(1rem, 0.92rem + 0.39vw, 1.25rem);
+  margin-block: clamp(1rem, 0.92rem + 0.39vw, 1.25rem);
   padding-inline: 0.5em;
 }
 @media (min-width: 1000px) {
@@ -757,7 +755,7 @@ body {
   font-size: clamp(1.2rem, 1.02rem + 0.88vw, 1.77rem);
 }
 .project__words-cont--description {
-  margin-block: clamp(0.75rem, 0.69rem + 0.29vw, 0.94rem);
+  padding-block: clamp(0.75rem, 0.69rem + 0.29vw, 0.94rem);
   position: relative;
   max-width: 60ch;
 }

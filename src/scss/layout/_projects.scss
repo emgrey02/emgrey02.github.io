@@ -82,7 +82,7 @@
   }
 
   &__words-cont {
-    margin-block-start: $space-s;
+    margin-block: $space-s;
     padding-inline: .5em;
 
     @media (min-width: 1000px) {
@@ -94,7 +94,7 @@
     }
 
     &--description {
-      margin-block: $space-xs;
+      padding-block: $space-xs;
       position: relative;
       max-width: 60ch;
     }
