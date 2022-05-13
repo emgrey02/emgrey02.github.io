@@ -384,37 +384,29 @@ textarea {
   font-size: clamp(1rem, 0.92rem + 0.39vw, 1.25rem);
 }
 
-@property --offset {
-  syntax: "<length>";
-  inherits: false;
-  initial-value: 2px;
-}
 a {
   color: inherit;
-  text-decoration: underline;
-  text-decoration-thickness: 0.15em;
-  -webkit-text-decoration-color: black;
-          text-decoration-color: black;
-  text-underline-offset: var(--offset, 0.2em);
-  transition: --offset 300ms, color 300ms, text-decoration-color 300ms, box-shadow 300ms;
+  position: relative;
+  /* underline */
 }
-@supports not (background: paint(something)) {
-  a {
-    transition: color 300ms, text-underline-offset 300ms, box-shadow 300ms, -webkit-text-decoration-color 300ms;
-    transition: text-decoration-color 300ms, color 300ms, text-underline-offset 300ms, box-shadow 300ms;
-    transition: text-decoration-color 300ms, color 300ms, text-underline-offset 300ms, box-shadow 300ms, -webkit-text-decoration-color 300ms;
-  }
+a:before {
+  content: "";
+  width: 100%;
+  height: 0.1em;
+  background-color: hsl(32deg, 100%, 66%);
+  position: absolute;
+  inset-inline-end: 0;
+  inset-block-end: 0;
+  transition: all 300ms ease;
 }
 a:hover {
-  --offset: 0.4em;
-  -webkit-text-decoration-color: hsl(32deg, 100%, 66%);
-          text-decoration-color: hsl(32deg, 100%, 66%);
-  color: black;
+  -webkit-text-decoration-color: hsl(32deg, 100%, 76%);
+          text-decoration-color: hsl(32deg, 100%, 76%);
+  color: blue;
 }
-@supports not (background: paint(something)) {
-  a:hover {
-    text-underline-offset: 0.4em;
-  }
+a:hover:before {
+  width: 4px;
+  height: 4px;
 }
 a:focus {
   outline: none;
@@ -448,10 +440,13 @@ a[class]:hover::after {
   -webkit-clip-path: inset(0 0 0 0);
           clip-path: inset(0 0 0 0);
 }
+a[class]:hover {
+  color: black;
+}
 
 body {
   color: #313131;
-  background-color: hsl(233deg, 17%, 90%);
+  background-color: hsl(233deg, 18%, 90%);
   font-family: "Khula", sans-serif;
   overflow-x: hidden;
 }
@@ -1039,7 +1034,7 @@ body {
 fieldset {
   border: none;
   background-color: hsl(230deg, 18%, 80%);
-  border-radius: 0.5em;
+  border-radius: 0.2em;
   padding: 2em 1em;
 }
 fieldset input + label {
@@ -1047,22 +1042,22 @@ fieldset input + label {
           margin-block-start: 1em;
 }
 fieldset input, fieldset textarea {
-  background-color: hsl(233deg, 17%, 90%);
+  background-color: hsl(233deg, 18%, 90%);
   border-radius: 0.5em;
   border: 2px solid hsl(32deg, 100%, 76%);
-  transition: box-shadow 200ms ease-in-out;
+  transition: box-shadow 200ms ease, color 200ms ease;
 }
 fieldset input:focus, fieldset textarea:focus {
   border-color: hsl(32deg, 100%, 66%);
   box-shadow: 0 0 0 3px hsl(32deg, 100%, 86%);
   outline: 3px solid transparent;
+  background-color: white;
 }
 
 form > input {
-  border-radius: 0.5em;
+  border-radius: 2rem;
   border: none;
-  box-shadow: 0 0 0 0px rgba(0, 0, 0, 0);
-  padding: 0.7em 0.75em 0.5em;
+  padding: 0.7em 2em 0.5em;
   cursor: pointer;
   background-color: hsl(235deg, 17%, 60%);
   color: white;
@@ -1071,7 +1066,6 @@ form > input {
 form > input:hover {
   background-color: hsl(32deg, 100%, 66%);
   color: black;
-  box-shadow: 0 0 0 2px black;
 }
 form > input:focus {
   outline: none;

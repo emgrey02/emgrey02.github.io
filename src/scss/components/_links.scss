@@ -1,30 +1,28 @@
-@use '../utilities/variables' as var;
-
-@property --offset {
-  syntax: '<length>';
-  inherits: false;
-  initial-value: 2px;
-}
+@use '../utilities/variables' as *;
 
 a {
   color: inherit;
-  text-decoration: underline;
-  text-decoration-thickness: .15em;
-  text-decoration-color: black;
-  text-underline-offset: var(--offset, .2em);
-  transition: --offset 300ms, color 300ms, text-decoration-color 300ms, box-shadow 300ms;
+  position: relative;
 
-  @supports not (background: paint(something)) {
-    transition: text-decoration-color 300ms, color 300ms, text-underline-offset 300ms, box-shadow 300ms;
+  /* underline */
+  &:before {
+    content: '';
+    width: 100%;
+    height: .1em;
+    background-color: $accent-400;
+    position: absolute;
+    inset-inline-end: 0;
+    inset-block-end: 0;
+    transition: all 300ms ease;
   }
 
   &:hover {
-    --offset: 0.4em;
-    text-decoration-color: var.$accent-400;
-    color: black;
+    text-decoration-color: $accent-300;
+    color: blue;
 
-    @supports not (background: paint(something)) {
-      text-underline-offset: 0.4em;
+    &:before {
+      width: 4px;
+      height: 4px;
     }
   }
 
@@ -49,11 +47,15 @@ a[class] {
     inset-block-start: 0;
     z-index: -1;
     clip-path: inset(0 100% 0 0);
-    background-color: var.$accent-300;
+    background-color: $accent-300;
     transition: clip-path 300ms ease;
   }
 
   &:hover::after {
     clip-path: inset(0 0 0 0);
+  }
+
+  &:hover {
+    color: black;
   }
 }
