@@ -727,9 +727,9 @@ body {
 }
 .project__image-cont--platter {
   position: absolute;
-  height: 80%;
+  height: 18rem;
   width: 100%;
-  inset-block-start: 10%;
+  inset-block-start: calc(50% - 9rem);
   inset-inline-start: 0;
   background-color: hsl(230deg, 18%, 80%);
   z-index: 0;

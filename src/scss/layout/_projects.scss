@@ -64,9 +64,9 @@
 
     &--platter {
       position: absolute;
-      height: 80%;
+      height: 18rem;
       width: 100%;
-      inset-block-start: 10%;
+      inset-block-start: calc(50% - 9rem);
       inset-inline-start: 0;
       background-color: $main-200;
       z-index: 0;
