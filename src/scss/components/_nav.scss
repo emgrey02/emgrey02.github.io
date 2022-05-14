@@ -15,27 +15,30 @@
 		flex-wrap: nowrap;
 	}
 
-	&__icon {
-		max-width: 60px;
-		max-height: 50px;
-		order: 1;
-		margin-block: .5em;
+	&__container {
+		display: flex;
+		padding-inline: 1em;
+		align-items: center;
 
 		@media (min-width: 1000px) {
-			order: 0;
-			margin-inline-start: 2em;
+			width: fit-content;
 		}
 	}
 
-	&__name {
-		flex: 0 1 100%;
-		line-height: 1;
-		text-align: center;
+	&__icon {
+		width: 4em;
+		height: 3.5em;
 		margin-block: .5em;
+	}
+
+	&__name {
+		line-height: .8;
+		text-align: center;
+		padding-block: .5em;
 
 		@media (min-width: 1000px) {
-			flex-basis: 40%;
 			text-align: start;
+			width: fit-content;
 		}
 	}
 

@@ -465,29 +465,34 @@ body {
     flex-wrap: nowrap;
   }
 }
-.nav__icon {
-  max-width: 60px;
-  max-height: 50px;
-  order: 1;
-  margin-block: 0.5em;
+.nav__container {
+  display: flex;
+  padding-inline: 1em;
+  align-items: center;
 }
 @media (min-width: 1000px) {
-  .nav__icon {
-    order: 0;
-    -webkit-margin-start: 2em;
-            margin-inline-start: 2em;
+  .nav__container {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
   }
 }
-.nav__name {
-  flex: 0 1 100%;
-  line-height: 1;
-  text-align: center;
+.nav__icon {
+  width: 4em;
+  height: 3.5em;
   margin-block: 0.5em;
+}
+.nav__name {
+  line-height: 0.8;
+  text-align: center;
+  padding-block: 0.5em;
 }
 @media (min-width: 1000px) {
   .nav__name {
-    flex-basis: 40%;
     text-align: start;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
   }
 }
 .nav__menu {
