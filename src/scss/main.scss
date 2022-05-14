@@ -1,6 +1,5 @@
 @use './base/reset';
-@use './utilities/variables' as var;
-@use './base/typography' as type;
+@use './utilities/variables';
 @use './layout/body';
 @use './layout/header';
 @use './layout/about';

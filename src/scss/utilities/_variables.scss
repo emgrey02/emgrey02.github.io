@@ -1,15 +1,52 @@
-/* main color */
-$main-400: hsl(235, 17%, 60%);
-$main-300: hsl(233, 17%, 72%);
-$main-200: hsl(230, 18%, 80%);
-$main-100: hsl(233, 18%, 90%);
+/* color themes */
+$main-400-light: hsl(235, 17%, 60%);
+$main-300-light: hsl(233, 17%, 72%);
+$main-200-light: hsl(230, 18%, 80%);
+$main-100-light: hsl(233, 17%, 90%);
 
-/* accent color */
-$accent-700: hsl(32, 100%, 36%);
-$accent-400: hsl(32, 100%, 66%);
-$accent-300: hsl(32, 100%, 76%);
-$accent-200: hsl(32, 100%, 86%);
-$accent-100: hsl(33, 100%, 96%);
+$accent-700-light: hsl(32, 100%, 36%);
+$accent-400-light: hsl(32, 100%, 66%);
+$accent-300-light: hsl(32, 100%, 76%);
+$accent-200-light: hsl(32, 100%, 86%);
+$accent-100-light: hsl(33, 100%, 96%);
+
+$main-400-dark: hsl(235, 56%, 84%);
+$main-300-dark: hsl(233, 17%, 72%);
+$main-200-dark: hsl(230, 18%, 80%);
+$main-100-dark: hsl(235, 17%, 60%);
+
+$accent-700-dark: hsl(32, 100%, 36%);
+$accent-400-dark: hsl(32, 100%, 66%);
+$accent-300-dark: hsl(32, 100%, 76%);
+$accent-200-dark: hsl(32, 100%, 86%);
+$accent-100-dark: hsl(33, 100%, 96%);
+
+$main-400: $main-400-light;
+$main-300: $main-300-light;
+$main-200: $main-200-light;
+$main-100: $main-100-light;
+
+$accent-700: $accent-700-light;
+$accent-400: $accent-400-light;
+$accent-300: $accent-300-light;
+$accent-200: $accent-200-light;
+$accent-100: $accent-100-light;
+
+@media (prefers-color-scheme: dark) {
+  $main-400: $main-400-dark;
+  $main-300: $main-300-dark;
+  $main-200: $main-200-dark;
+  $main-100: $main-100-dark;
+
+  $accent-700: $accent-700-dark;
+  $accent-400: $accent-400-dark;
+  $accent-300: $accent-300-dark;
+  $accent-200: $accent-200-dark;
+  $accent-100: $accent-100-dark;
+}
+
+
+
 
 /* spacing */
 $space-3xs: clamp(.25rem, calc(.23rem + .1vw), .31rem);

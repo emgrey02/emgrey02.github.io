@@ -334,56 +334,9 @@ textarea {
   padding: 0.3em;
 }
 
-/* main color */
-/* accent color */
+/* color themes */
 /* spacing */
 /* font sizing */
-@font-face {
-  font-family: "Khula";
-  src: url("../src/fonts/Khula Light 300.ttf") format("truetype"), url("../src/fonts/Khula Regular 400.ttf") format("truetype"), url("../src/fonts/Khula SemiBold 600.ttf") format("truetype"), url("../src/fonts/Khula Bold 700.ttf") format("truetype"), url("../src/fonts/Khula ExtraBold 800.ttf") format("truetype");
-  font-weight: 300 400 600 700 800;
-}
-h1 {
-  font-size: clamp(2.07rem, 1.17rem + 4.54vw, 5rem);
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.215em;
-}
-
-h2 {
-  font-size: clamp(1.73rem, 1.17rem + 2.8vw, 3.53rem);
-  font-weight: 800;
-  text-transform: uppercase;
-}
-
-h3 {
-  font-size: clamp(1.73rem, 1.17rem + 2.8vw, 3.53rem);
-  font-weight: 600;
-  letter-spacing: 0.04em;
-}
-
-.nav__item {
-  font-size: clamp(1.2rem, 1.02rem + 0.88vw, 1.77rem);
-  font-weight: 300;
-  text-transform: uppercase;
-  letter-spacing: 0.215em;
-}
-
-body {
-  font-size: clamp(1rem, 0.92rem + 0.39vw, 1.25rem);
-  font-weight: 400;
-  line-height: 1.5;
-}
-
-label {
-  font-size: clamp(1.2rem, 1.02rem + 0.88vw, 1.77rem);
-}
-
-input,
-textarea {
-  font-size: clamp(1rem, 0.92rem + 0.39vw, 1.25rem);
-}
-
 a {
   color: inherit;
   position: relative;
@@ -444,9 +397,55 @@ a[class]:hover {
   color: black;
 }
 
+@font-face {
+  font-family: "Khula";
+  src: url("../src/fonts/Khula Light 300.ttf") format("truetype"), url("../src/fonts/Khula Regular 400.ttf") format("truetype"), url("../src/fonts/Khula SemiBold 600.ttf") format("truetype"), url("../src/fonts/Khula Bold 700.ttf") format("truetype"), url("../src/fonts/Khula ExtraBold 800.ttf") format("truetype");
+  font-weight: 300 400 600 700 800;
+}
+h1 {
+  font-size: clamp(2.07rem, 1.17rem + 4.54vw, 5rem);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.215em;
+}
+
+h2 {
+  font-size: clamp(1.73rem, 1.17rem + 2.8vw, 3.53rem);
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: clamp(1.73rem, 1.17rem + 2.8vw, 3.53rem);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.nav__item {
+  font-size: clamp(1.2rem, 1.02rem + 0.88vw, 1.77rem);
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.215em;
+}
+
+body {
+  font-size: clamp(1rem, 0.92rem + 0.39vw, 1.25rem);
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+label {
+  font-size: clamp(1.2rem, 1.02rem + 0.88vw, 1.77rem);
+}
+
+input,
+textarea {
+  font-size: clamp(1rem, 0.92rem + 0.39vw, 1.25rem);
+}
+
 body {
   color: #313131;
-  background-color: hsl(233deg, 18%, 90%);
+  background-color: hsl(233deg, 17%, 90%);
   font-family: "Khula", sans-serif;
   overflow-x: hidden;
 }
@@ -1047,7 +1046,7 @@ fieldset input + label {
           margin-block-start: 1em;
 }
 fieldset input, fieldset textarea {
-  background-color: hsl(233deg, 18%, 90%);
+  background-color: hsl(233deg, 17%, 90%);
   border-radius: 0.5em;
   border: 2px solid hsl(32deg, 100%, 76%);
   transition: box-shadow 200ms ease, color 200ms ease;
