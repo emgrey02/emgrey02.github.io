@@ -31,9 +31,9 @@ fieldset {
 form>input {
   border-radius: 2rem;
   border: none;
-  padding: .7em 2em .5em;
+  padding: .7em 4em .5em;
   cursor: pointer;
-  background-color: var(--main-400);
+  background-color: var(--main-200);
   color: var(--button-text);
   transition: color 200ms, background-color 200ms, box-shadow 200ms;
 
@@ -44,7 +44,7 @@ form>input {
 
   &:focus {
     outline: none;
-    box-shadow: 0 0 0 4px black;
+    box-shadow: 0 0 0 4px var(--focus-color);
   }
 }
 

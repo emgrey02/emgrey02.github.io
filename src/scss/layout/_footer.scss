@@ -1,0 +1,29 @@
+@use '../utilities/variables' as *;
+
+.footer {
+  width: 100%;
+  background-color: var(--main-200);
+  position: absolute;
+  margin-block-start: $space-l;
+
+  &__contact-title {
+    text-align: center;
+    padding-top: $space-m;
+    font-weight: 200;
+  }
+
+  & p {
+    text-align: center;
+    padding: 1rem;
+  }
+}
+
+.sm-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: max(60%, 20rem);
+  gap: 1rem;
+  margin-inline: auto;
+  padding: $space-s;
+}

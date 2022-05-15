@@ -366,7 +366,7 @@ h2 {
   --accent-100-dark: hsl(43, 52%, 85%);
   --body-text-dark: #D6D6D6;
   --link-text-dark: lightblue;
-  --focus-color-dark: rgb(43, 202, 255);
+  --focus-color-dark: white;
   --h2-color-dark: #2c2c2c;
   --form-text-dark: white;
   --button-text-dark: black;
@@ -1134,9 +1134,9 @@ fieldset input:focus, fieldset textarea:focus {
 form > input {
   border-radius: 2rem;
   border: none;
-  padding: 0.7em 2em 0.5em;
+  padding: 0.7em 4em 0.5em;
   cursor: pointer;
-  background-color: var(--main-400);
+  background-color: var(--main-200);
   color: var(--button-text);
   transition: color 200ms, background-color 200ms, box-shadow 200ms;
 }
@@ -1146,7 +1146,7 @@ form > input:hover {
 }
 form > input:focus {
   outline: none;
-  box-shadow: 0 0 0 4px black;
+  box-shadow: 0 0 0 4px var(--focus-color);
 }
 
 input[type=submit] {
@@ -1190,4 +1190,31 @@ input[type=submit] {
   width: -moz-fit-content;
   width: fit-content;
   justify-self: center;
+}
+
+.footer {
+  width: 100%;
+  background-color: var(--main-200);
+  position: absolute;
+  -webkit-margin-before: clamp(3rem, 2.77rem + 1.17vw, 3.75rem);
+          margin-block-start: clamp(3rem, 2.77rem + 1.17vw, 3.75rem);
+}
+.footer__contact-title {
+  text-align: center;
+  padding-top: clamp(2rem, 1.84rem + 0.78vw, 2.5rem);
+  font-weight: 200;
+}
+.footer p {
+  text-align: center;
+  padding: 1rem;
+}
+
+.sm-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: max(60%, 20rem);
+  gap: 1rem;
+  margin-inline: auto;
+  padding: clamp(1rem, 0.92rem + 0.39vw, 1.25rem);
 }/*# sourceMappingURL=main.css.map */
