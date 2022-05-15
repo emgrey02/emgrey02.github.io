@@ -334,7 +334,78 @@ textarea {
   padding: 0.3em;
 }
 
+h2 {
+  color: var(--h2-color);
+}
+
 /* color themes */
+:root {
+  --main-400-light: hsl(235, 56%, 84%);
+  --main-300-light: hsl(233, 17%, 72%);
+  --main-200-light: hsl(230, 18%, 80%);
+  --main-100-light: #e1e2ea;
+  --accent-700-light: #b86200;
+  --accent-400-light: #ffae52;
+  --accent-300-light: hsl(32, 100%, 76%);
+  --accent-200-light: hsl(32, 100%, 86%);
+  --accent-100-light: hsl(33, 100%, 96%);
+  --body-text-light: #313131;
+  --link-text-light: blue;
+  --focus-color-light: black;
+  --h2-color-light: var(--body-text-light);
+  --form-text-light: var(--body-text-light);
+  --button-text-light: var(--body-text-light);
+  --main-400-dark: hsl(240, 13%, 85%);
+  --main-300-dark: hsl(240, 13%, 65%);
+  --main-200-dark: hsl(240, 13%, 45%);
+  --main-100-dark: rgb(55, 55, 72);
+  --accent-700-dark: hsl(43, 52%, 35%);
+  --accent-400-dark: #c8a651;
+  --accent-300-dark: hsl(43, 52%, 65%);
+  --accent-200-dark: hsl(43, 52%, 75%);
+  --accent-100-dark: hsl(43, 52%, 85%);
+  --body-text-dark: #D6D6D6;
+  --link-text-dark: lightblue;
+  --focus-color-dark: rgb(43, 202, 255);
+  --h2-color-dark: #2c2c2c;
+  --form-text-dark: white;
+  --button-text-dark: black;
+  --main-400: var(--main-400-light);
+  --main-300: var(--main-300-light);
+  --main-200: var(--main-200-light);
+  --main-100: var(--main-100-light);
+  --accent-700: var(--accent-700-light);
+  --accent-400: var(--accent-400-light);
+  --accent-300: var(--accent-300-light);
+  --accent-200: var(--accent-200-light);
+  --accent-100: var(--accent-100-light);
+  --body-text: var(--body-text-light);
+  --link-text: var(--link-text-light);
+  --focus-color: var(--focus-color-light);
+  --h2-color: var(--h2-color-light);
+  --form-text: var(--form-text-light);
+  --button-text: var(--button-text-light);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-400: var(--main-400-dark);
+    --main-300: var(--main-300-dark);
+    --main-200: var(--main-200-dark);
+    --main-100: var(--main-100-dark);
+    --accent-700: var(--accent-700-dark);
+    --accent-400: var(--accent-400-dark);
+    --accent-300: var(--accent-300-dark);
+    --accent-200: var(--accent-200-dark);
+    --accent-100: var(--accent-100-dark);
+    --body-text: var(--body-text-dark);
+    --link-text: var(--link-text-dark);
+    --focus-color: var(--focus-color-dark);
+    --h2-color: var(--h2-color-dark);
+    --form-text: var(--form-text-dark);
+    --button-text: var(--button-text-dark);
+  }
+}
+
 /* spacing */
 /* font sizing */
 a {
@@ -346,16 +417,16 @@ a:before {
   content: "";
   width: 100%;
   height: 0.1em;
-  background-color: hsl(32deg, 100%, 66%);
+  background-color: var(--accent-400);
   position: absolute;
   inset-inline-end: 0;
   inset-block-end: 0;
   transition: all 300ms ease;
 }
 a:hover {
-  -webkit-text-decoration-color: hsl(32deg, 100%, 76%);
-          text-decoration-color: hsl(32deg, 100%, 76%);
-  color: blue;
+  -webkit-text-decoration-color: var(--accent-300);
+          text-decoration-color: var(--accent-300);
+  color: var(--link-text);
 }
 a:hover:before {
   width: 4px;
@@ -363,7 +434,7 @@ a:hover:before {
 }
 a:focus {
   outline: none;
-  box-shadow: 0 0 0 2px black;
+  box-shadow: 0 0 0 2px var(--focus-color);
 }
 
 a[class] {
@@ -384,7 +455,7 @@ a[class]::after {
   z-index: -1;
   -webkit-clip-path: inset(0 100% 0 0);
           clip-path: inset(0 100% 0 0);
-  background-color: hsl(32deg, 100%, 76%);
+  background-color: var(--accent-300);
   transition: -webkit-clip-path 300ms ease;
   transition: clip-path 300ms ease;
   transition: clip-path 300ms ease, -webkit-clip-path 300ms ease;
@@ -444,8 +515,8 @@ textarea {
 }
 
 body {
-  color: #313131;
-  background-color: hsl(233deg, 17%, 90%);
+  color: var(--body-text);
+  background-color: var(--main-100);
   font-family: "Khula", sans-serif;
   overflow-x: hidden;
 }
@@ -526,7 +597,7 @@ body {
   margin-block: 5rem;
 }
 .moving-lines__line {
-  background-color: hsl(233deg, 17%, 72%);
+  background-color: var(--main-300);
   height: 18px;
   width: 100%;
   border-top-right-radius: 10px;
@@ -537,7 +608,7 @@ body {
   transform: translateX(-20%);
 }
 .moving-lines__line:last-child, .moving-lines__line:nth-child(4) {
-  background-color: hsl(230deg, 18%, 80%);
+  background-color: var(--main-200);
   transform: translateX(-30%);
   -webkit-animation-duration: 3.9s;
           animation-duration: 3.9s;
@@ -623,7 +694,7 @@ body {
   width: 102%;
   height: 80%;
   transform: translateX(-1%);
-  background-color: hsl(32deg, 100%, 66%);
+  background-color: var(--accent-400);
   z-index: -1;
 }
 .about__image {
@@ -687,7 +758,7 @@ body {
   width: 102%;
   height: 80%;
   transform: translateX(-1%);
-  background-color: hsl(32deg, 100%, 66%);
+  background-color: var(--accent-400);
   z-index: -1;
 }
 .projects .project.right {
@@ -730,7 +801,7 @@ body {
   width: 100%;
   inset-block-start: calc(50% - 9rem);
   inset-inline-start: 0;
-  background-color: hsl(230deg, 18%, 80%);
+  background-color: var(--main-200);
   z-index: 0;
 }
 .project__image-cont--image {
@@ -1037,7 +1108,7 @@ body {
 
 fieldset {
   border: none;
-  background-color: hsl(230deg, 18%, 80%);
+  background-color: var(--main-200);
   border-radius: 0.2em;
   padding: 2em 1em;
 }
@@ -1046,14 +1117,16 @@ fieldset input + label {
           margin-block-start: 1em;
 }
 fieldset input, fieldset textarea {
-  background-color: hsl(233deg, 17%, 90%);
+  color: var(--form-text);
+  background-color: var(--main-100);
   border-radius: 0.5em;
-  border: 2px solid hsl(32deg, 100%, 76%);
+  border: 2px solid var(--accent-300);
   transition: box-shadow 200ms ease, color 200ms ease;
 }
 fieldset input:focus, fieldset textarea:focus {
-  border-color: hsl(32deg, 100%, 66%);
-  box-shadow: 0 0 0 3px hsl(32deg, 100%, 86%);
+  color: black;
+  border-color: var(--accent-400);
+  box-shadow: 0 0 0 3px var(--accent-200);
   outline: 3px solid transparent;
   background-color: white;
 }
@@ -1063,12 +1136,12 @@ form > input {
   border: none;
   padding: 0.7em 2em 0.5em;
   cursor: pointer;
-  background-color: hsl(235deg, 17%, 60%);
-  color: white;
+  background-color: var(--main-400);
+  color: var(--button-text);
   transition: color 200ms, background-color 200ms, box-shadow 200ms;
 }
 form > input:hover {
-  background-color: hsl(32deg, 100%, 66%);
+  background-color: var(--accent-400);
   color: black;
 }
 form > input:focus {
@@ -1100,7 +1173,7 @@ input[type=submit] {
   width: 102%;
   height: 80%;
   transform: translateX(-1%);
-  background-color: hsl(32deg, 100%, 66%);
+  background-color: var(--accent-400);
   z-index: -1;
 }
 .contact__form {

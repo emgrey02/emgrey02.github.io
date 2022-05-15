@@ -1,12 +1,12 @@
 @use '../components/nav';
-@use '../utilities/variables' as var;
+@use '../utilities/variables';
 
 .moving-lines {
   width: 100%;
   margin-block: 5rem;
 
   &__line {
-    background-color: var.$main-300;
+    background-color: var(--main-300);
     height: 18px;
     width: 100%;
     border-top-right-radius: 10px;
@@ -17,7 +17,7 @@
 
     &:last-child,
     &:nth-child(4) {
-      background-color: var.$main-200;
+      background-color: var(--main-200);
       transform: translateX(-30%);
       animation-duration: 3.9s;
     }

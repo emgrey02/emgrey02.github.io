@@ -20,7 +20,7 @@
       width: 102%;
       height: 80%;
       transform: translateX(-1%);
-      background-color: $accent-400;
+      background-color: var(--accent-400);
       z-index: -1;
     }
   }
@@ -68,7 +68,7 @@
       width: 100%;
       inset-block-start: calc(50% - 9rem);
       inset-inline-start: 0;
-      background-color: $main-200;
+      background-color: var(--main-200);
       z-index: 0;
     }
 

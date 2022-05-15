@@ -2,7 +2,7 @@
 
 fieldset {
   border: none;
-  background-color: $main-200;
+  background-color: var(--main-200);
   border-radius: .2em;
   padding: 2em 1em;
 
@@ -12,14 +12,16 @@ fieldset {
 
   & input,
   & textarea {
-    background-color: $main-100;
+    color: var(--form-text);
+    background-color: var(--main-100);
     border-radius: .5em;
-    border: 2px solid $accent-300;
+    border: 2px solid var(--accent-300);
     transition: box-shadow 200ms ease, color 200ms ease;
 
     &:focus {
-      border-color: $accent-400;
-      box-shadow: 0 0 0 3px $accent-200;
+      color: black;
+      border-color: var(--accent-400);
+      box-shadow: 0 0 0 3px var(--accent-200);
       outline: 3px solid transparent;
       background-color: white;
     }
@@ -31,12 +33,12 @@ form>input {
   border: none;
   padding: .7em 2em .5em;
   cursor: pointer;
-  background-color: $main-400;
-  color: white;
+  background-color: var(--main-400);
+  color: var(--button-text);
   transition: color 200ms, background-color 200ms, box-shadow 200ms;
 
   &:hover {
-    background-color: $accent-400;
+    background-color: var(--accent-400);
     color: black;
   }
 

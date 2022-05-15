@@ -9,7 +9,7 @@ a {
     content: '';
     width: 100%;
     height: .1em;
-    background-color: $accent-400;
+    background-color: var(--accent-400);
     position: absolute;
     inset-inline-end: 0;
     inset-block-end: 0;
@@ -17,8 +17,8 @@ a {
   }
 
   &:hover {
-    text-decoration-color: $accent-300;
-    color: blue;
+    text-decoration-color: var(--accent-300);
+    color: var(--link-text);
 
     &:before {
       width: 4px;
@@ -28,7 +28,7 @@ a {
 
   &:focus {
     outline: none;
-    box-shadow: 0 0 0 2px black;
+    box-shadow: 0 0 0 2px var(--focus-color);
   }
 }
 
@@ -47,7 +47,7 @@ a[class] {
     inset-block-start: 0;
     z-index: -1;
     clip-path: inset(0 100% 0 0);
-    background-color: $accent-300;
+    background-color: var(--accent-300);
     transition: clip-path 300ms ease;
   }
 

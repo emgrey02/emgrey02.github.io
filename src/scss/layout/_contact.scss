@@ -19,7 +19,7 @@
       width: 102%;
       height: 80%;
       transform: translateX(-1%);
-      background-color: $accent-400;
+      background-color: var(--accent-400);
       z-index: -1;
     }
   }
