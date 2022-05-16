@@ -13,133 +13,162 @@
   <script src="src/script/index.js" defer></script>
 </head>
 
-<header>
-  <nav class="nav">
-    <div class="nav__container">
-      <svg class="nav__icon">
-        <use href="#icon"></use>
-      </svg>
-      <h1 class="nav__name">Emma Grey</h1>
-    </div>
-    <ul class="nav__menu">
-      <li class="nav__item">
-        <a class="nav__link" href="#about">About</a>
-      </li>
-      <li class="nav__item">
-        <a class="nav__link" href="#projects">Projects</a>
-      </li>
-      <li class="nav__item">
-        <a class="nav__link" href="#contact">Contact</a>
-      </li>
-    </ul>
-  </nav>
+<body class="system">
 
-  <div class="moving-lines">
-    <div class="moving-lines__line"></div>
-    <div class="moving-lines__line"></div>
-    <div class="moving-lines__line"></div>
-    <div class="moving-lines__line"></div>
-    <div class="moving-lines__line"></div>
-    <div class="moving-lines__line"></div>
-    <div class="moving-lines__line"></div>
-  </div>
-</header>
-
-<main>
-  <section class="about" id="about">
-    <h2 class="about__title">About Me</h2>
-    <img src="src/assets/emma.svg" alt="Emma's face staring off to the right" class="about__image">
-    <div class="moving-lines__line about__line"></div>
-    <div class="about__container">
-      <h3 class="about__container--tidbit">Musician, Web Developer</h3>
-      <p class="about__container--para">Hey there! My name is Emma. After completing a bachelor's degree in Clarinet
-        Performance, I'm transitioning into a career in Web Development. I'm currently working on an Associate's degree
-        in Interface Design and Web Development and looking for experience so that I can land an entry-level web
-        developer position. </p>
-      <p class="about__container--para">I focus on accessibility and usability in my web creations. I don't want to bar
-        anyone from using a website of mine. While working hard developing, I'm beginning to also enjoy web
-        design as I get more comfortable
-        using Figma. I'm even starting to make my own vector images. Right
-        now I have the most experience using HTML, CSS, and JavaScript without any frameworks at the moment, although I
-        have dabbled in Svelte and React. As I continue coding and learning, I want to keep contributing to
-        open-source projects and start to work on larger projects with others.
-      </p>
-    </div>
-  </section>
-
-  <section class="projects" id="projects">
-    <h2 class="projects__title">Projects</h2>
-
-    <div class="project right first in-view">
-      <div class="project__image-cont">
-        <span class="project__image-cont--platter "></span>
-        <img class="project__image-cont--image" src="src/assets/statalog.svg" alt="screenshot of Statalog fitbit clock">
+  <header>
+    <nav class="nav">
+      <div class="nav__container">
+        <svg class="nav__icon">
+          <use href="#icon"></use>
+        </svg>
+        <h1 class="nav__name">Emma Grey</h1>
       </div>
-      <div class="project__words-cont">
-        <h3 class="project__words-cont--title">Statalog</h3>
-        <p class="project__words-cont--environment">Fitbit Sense/Versa 3 Clock</p>
-        <p class="project__words-cont--description">An Analog clock I made for the Fitbit Sense and Fitbit Versa 3
-          smartwatches. I built it with CSS, SVG, and JavaScript using Fitbit Studio, an online development environment,
-          and the Fitbit OS Simulator. </p>
-        <a href="https://gallery.fitbit.com/details/58e742e9-d043-4ee1-a8be-479c1e1c6db7"
-          class="project__words-cont--first-link">Fitbit App Gallery</a>
-        <a href="https://github.com/emgrey02/statalog" class="project__words-cont--second-link">Code</a>
-      </div>
+      <ul class="nav__menu">
+        <li class="nav__item">
+          <a class="nav__link" href="#about">About</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#projects">Projects</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="moving-lines">
+      <div class="moving-lines__line"></div>
+      <div class="moving-lines__line"></div>
+      <div class="moving-lines__line"></div>
+      <div class="moving-lines__line"></div>
+      <div class="moving-lines__line"></div>
+      <div class="moving-lines__line"></div>
+      <div class="moving-lines__line"></div>
     </div>
 
-    <div class="project left second in-view">
-      <div class="project__image-cont">
-        <span class="project__image-cont--platter"></span>
-        <img class="project__image-cont--image" src="src/assets/style-stage-screenshot.png"
-          alt="screenshot of Emma's Style Stage submission">
-      </div>
-      <div class="project__words-cont">
-        <h3 class="project__words-cont--title">Style Stage Submission</h3>
-        <p class="project__words-cont--environment">Website</p>
-        <p class="project__words-cont--description"> I submitted a style sheet to Stephanie Eckle's <a
-            href="https://stylestage.dev/">Style Stage</a> which
-          is an opportunity for anyone to re-style an unmodifiable HTML page. I used <a
-            href="https://sass-lang.com/">Sass</a> and compiled it into a single CSS file with <a
-            href="https://parcel.com">Parcel</a>. Anyone can contribute and submit a Pull Request to the <a
-            href="https://github.com/5t3ph/stylestage">github repository</a> as long as they follow the guidelines! </p>
-        <a href="https://stylestage.dev/styles/drawing-board/" class="project__words-cont--first-link">Live Site</a>
-        <a href="https://github.com/emgrey02/style-stage-emgrey02" class="project__words-cont--second-link">Code</a>
-      </div>
-    </div>
-  </section>
+    <div class="theme-toggle">
 
-  <section class="contact" id="contact">
-    <h2 class="contact__title">Contact</h2>
-    <form class="contact__form" name="simple-contact-form" accept-charset="utf-8"
-      action="https://formspree.io/f/xyyolzza" method="post">
       <fieldset>
-        <label for="full-name">Full Name</label>
-        <input type="text" name="name" id="full-name" required>
-        <label for="email-address">Email Address</label>
-        <input type="email" name="_replyto" id="email-address" required>
-        <label for="message">Message</label>
-        <textarea rows="5" name="message" id="message" required></textarea>
-        <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+        <legend>color theme</legend>
+        <div>
+          <input id="option1" type="radio" name="theme" value="light">
+          <label for="option1">Light</label>
+        </div>
+
+        <div>
+          <input id="option2" type="radio" name="theme" value="dark">
+          <label for="option2">Dark</label>
+        </div>
+
+        <div>
+          <input id="option3" type="radio" name="theme" value="system" checked>
+          <label for="option3">System</label>
+        </div>
       </fieldset>
-      <input type="submit" value="Submit">
-    </form>
-  </section>
 
-  </body>
+    </div>
+  </header>
 
-  <svg width="0" height="0" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <symbol id="icon" viewBox="0 0 290 255">
-      <path
-        d="M9.55544 194.87C-37.3 50.8318 98.061 -13.1628 200.45 2.24066C396.55 31.7424 219.776 311.141 141.446 194.87C30.3805 30.007 73.2851 390.781 9.55544 194.87Z"
-        fill="#888BAA" />
-      <ellipse cx="22.5229" cy="119.373" rx="13.5139" ry="18.7693" fill="#E5E5E5" />
-      <ellipse cx="58.5603" cy="138.893" rx="13.5139" ry="18.7693" fill="#E5E5E5" />
-      <ellipse cx="57.8094" cy="138.142" rx="6.75696" ry="9.00928" fill="black" />
-      <ellipse cx="21.7726" cy="120.124" rx="6.75696" ry="9.00928" fill="black" />
-      <path d="M7.50781 111.114C13.7643 103.106 20.271 84.0866 40.5418 111.114L7.50781 111.114Z" fill="#FFAF51" />
-      <path d="M40.5418 129.884C46.7983 121.876 53.305 102.856 73.5758 129.884H40.5418Z" fill="#FFAF51" />
-    </symbol>
-  </svg>
+  <main>
+    <section class="about" id="about">
+      <h2 class="about__title">About Me</h2>
+      <img src="src/assets/emma.svg" alt="Emma's face staring off to the right" class="about__image">
+      <div class="moving-lines__line about__line"></div>
+      <div class="about__container">
+        <h3 class="about__container--tidbit">Musician, Web Developer</h3>
+        <p class="about__container--para">Hey there! My name is Emma. After completing a bachelor's degree in Clarinet
+          Performance, I'm transitioning into a career in Web Development. I'm currently working on an Associate's
+          degree
+          in Interface Design and Web Development and looking for experience so that I can land an entry-level web
+          developer position. </p>
+        <p class="about__container--para">I focus on accessibility and usability in my web creations. I don't want to
+          bar
+          anyone from using a website of mine. While working hard developing, I'm beginning to also enjoy web
+          design as I get more comfortable
+          using Figma. I'm even starting to make my own vector images. Right
+          now I have the most experience using HTML, CSS, and JavaScript without any frameworks at the moment, although
+          I
+          have dabbled in Svelte and React. As I continue coding and learning, I want to keep contributing to
+          open-source projects and start to work on larger projects with others.
+        </p>
+      </div>
+    </section>
+
+    <section class="projects" id="projects">
+      <h2 class="projects__title">Projects</h2>
+
+      <div class="project right first in-view">
+        <div class="project__image-cont">
+          <span class="project__image-cont--platter "></span>
+          <img class="project__image-cont--image" src="src/assets/statalog.svg"
+            alt="screenshot of Statalog fitbit clock">
+        </div>
+        <div class="project__words-cont">
+          <h3 class="project__words-cont--title">Statalog</h3>
+          <p class="project__words-cont--environment">Fitbit Sense/Versa 3 Clock</p>
+          <p class="project__words-cont--description">An Analog clock I made for the Fitbit Sense and Fitbit Versa 3
+            smartwatches. I built it with CSS, SVG, and JavaScript using Fitbit Studio, an online development
+            environment,
+            and the Fitbit OS Simulator. </p>
+          <a href="https://gallery.fitbit.com/details/58e742e9-d043-4ee1-a8be-479c1e1c6db7"
+            class="project__words-cont--first-link">Fitbit App Gallery</a>
+          <a href="https://github.com/emgrey02/statalog" class="project__words-cont--second-link">Code</a>
+        </div>
+      </div>
+
+      <div class="project left second in-view">
+        <div class="project__image-cont">
+          <span class="project__image-cont--platter"></span>
+          <img class="project__image-cont--image" src="src/assets/style-stage-screenshot.png"
+            alt="screenshot of Emma's Style Stage submission">
+        </div>
+        <div class="project__words-cont">
+          <h3 class="project__words-cont--title">Style Stage Submission</h3>
+          <p class="project__words-cont--environment">Website</p>
+          <p class="project__words-cont--description"> I submitted a style sheet to Stephanie Eckle's <a
+              href="https://stylestage.dev/">Style Stage</a> which
+            is an opportunity for anyone to re-style an unmodifiable HTML page. I used <a
+              href="https://sass-lang.com/">Sass</a> and compiled it into a single CSS file with <a
+              href="https://parcel.com">Parcel</a>. Anyone can contribute and submit a Pull Request to the <a
+              href="https://github.com/5t3ph/stylestage">github repository</a> as long as they follow the guidelines!
+          </p>
+          <a href="https://stylestage.dev/styles/drawing-board/" class="project__words-cont--first-link">Live Site</a>
+          <a href="https://github.com/emgrey02/style-stage-emgrey02" class="project__words-cont--second-link">Code</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2 class="contact__title">Contact</h2>
+      <form class="contact__form" name="simple-contact-form" accept-charset="utf-8"
+        action="https://formspree.io/f/xyyolzza" method="post">
+        <fieldset>
+          <label for="full-name">Full Name</label>
+          <input type="text" name="name" id="full-name" required>
+          <label for="email-address">Email Address</label>
+          <input type="email" name="_replyto" id="email-address" required>
+          <label for="message">Message</label>
+          <textarea rows="5" name="message" id="message" required></textarea>
+          <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+        </fieldset>
+        <input type="submit" value="Submit">
+      </form>
+    </section>
+
+    <svg width="0" height="0" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <symbol id="icon" viewBox="0 0 290 255">
+        <path
+          d="M9.55544 194.87C-37.3 50.8318 98.061 -13.1628 200.45 2.24066C396.55 31.7424 219.776 311.141 141.446 194.87C30.3805 30.007 73.2851 390.781 9.55544 194.87Z"
+          fill="#888BAA" />
+        <ellipse cx="22.5229" cy="119.373" rx="13.5139" ry="18.7693" fill="#E5E5E5" />
+        <ellipse cx="58.5603" cy="138.893" rx="13.5139" ry="18.7693" fill="#E5E5E5" />
+        <ellipse cx="57.8094" cy="138.142" rx="6.75696" ry="9.00928" fill="black" />
+        <ellipse cx="21.7726" cy="120.124" rx="6.75696" ry="9.00928" fill="black" />
+        <path d="M7.50781 111.114C13.7643 103.106 20.271 84.0866 40.5418 111.114L7.50781 111.114Z" fill="#FFAF51" />
+        <path d="M40.5418 129.884C46.7983 121.876 53.305 102.856 73.5758 129.884H40.5418Z" fill="#FFAF51" />
+      </symbol>
+    </svg>
+  </main>
 
   <footer class="footer">
     <h3 class="footer__contact-title">connect</h3>
@@ -162,7 +191,6 @@
           </a>
         </li>
 
-
         <li class="sm-links__link">
           <a href="https://linkedin.com/in/emma-grey-289321190/">
             <img src="src/assets/linkedin.svg" alt="linkedin logo">
@@ -179,6 +207,6 @@
     </div>
     <p>© Emma Grey</p>
   </footer>
-</main>
+</body>
 
 </html>

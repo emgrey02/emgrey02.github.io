@@ -1,6 +1,6 @@
 @use '../utilities/variables' as *;
 
-fieldset {
+.contact__form fieldset {
   border: none;
   background-color: var(--main-200);
   border-radius: .2em;

@@ -370,6 +370,45 @@ h2 {
   --h2-color-dark: #2c2c2c;
   --form-text-dark: white;
   --button-text-dark: black;
+}
+
+body.light {
+  --main-400: var(--main-400-light);
+  --main-300: var(--main-300-light);
+  --main-200: var(--main-200-light);
+  --main-100: var(--main-100-light);
+  --accent-700: var(--accent-700-light);
+  --accent-400: var(--accent-400-light);
+  --accent-300: var(--accent-300-light);
+  --accent-200: var(--accent-200-light);
+  --accent-100: var(--accent-100-light);
+  --body-text: var(--body-text-light);
+  --link-text: var(--link-text-light);
+  --focus-color: var(--focus-color-light);
+  --h2-color: var(--h2-color-light);
+  --form-text: var(--form-text-light);
+  --button-text: var(--button-text-light);
+}
+
+body.dark {
+  --main-400: var(--main-400-dark);
+  --main-300: var(--main-300-dark);
+  --main-200: var(--main-200-dark);
+  --main-100: var(--main-100-dark);
+  --accent-700: var(--accent-700-dark);
+  --accent-400: var(--accent-400-dark);
+  --accent-300: var(--accent-300-dark);
+  --accent-200: var(--accent-200-dark);
+  --accent-100: var(--accent-100-dark);
+  --body-text: var(--body-text-dark);
+  --link-text: var(--link-text-dark);
+  --focus-color: var(--focus-color-dark);
+  --h2-color: var(--h2-color-dark);
+  --form-text: var(--form-text-dark);
+  --button-text: var(--button-text-dark);
+}
+
+body.system {
   --main-400: var(--main-400-light);
   --main-300: var(--main-300-light);
   --main-200: var(--main-200-light);
@@ -387,7 +426,7 @@ h2 {
   --button-text: var(--button-text-light);
 }
 @media (prefers-color-scheme: dark) {
-  :root {
+  body.system {
     --main-400: var(--main-400-dark);
     --main-300: var(--main-300-dark);
     --main-200: var(--main-200-dark);
@@ -519,6 +558,7 @@ body {
   background-color: var(--main-100);
   font-family: "Khula", sans-serif;
   overflow-x: hidden;
+  transition: background-color 200ms, color 200ms;
 }
 
 .nav {
@@ -590,6 +630,38 @@ body {
 }
 .nav__link {
   padding: 0em 0.75em;
+}
+
+.theme-toggle {
+  position: absolute;
+  inset-inline-end: 1em;
+  inset-block-start: 200px;
+}
+.theme-toggle fieldset {
+  display: flex;
+  gap: 1em;
+  padding-block: 0.3em;
+  padding-inline: 0.5em;
+  border: 2px solid var(--main-400);
+}
+.theme-toggle label {
+  position: relative;
+}
+.theme-toggle input {
+  display: none;
+}
+.theme-toggle input:checked ~ label {
+  color: var(--button-text);
+}
+.theme-toggle input:checked ~ label::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1.2em;
+  background-color: var(--accent-300);
+  inset-block-start: 0.1em;
+  inset-inline-start: 0;
+  z-index: -1;
 }
 
 .moving-lines {
@@ -1106,24 +1178,24 @@ body {
           margin-inline-end: auto;
 }
 
-fieldset {
+.contact__form fieldset {
   border: none;
   background-color: var(--main-200);
   border-radius: 0.2em;
   padding: 2em 1em;
 }
-fieldset input + label {
+.contact__form fieldset input + label {
   -webkit-margin-before: 1em;
           margin-block-start: 1em;
 }
-fieldset input, fieldset textarea {
+.contact__form fieldset input, .contact__form fieldset textarea {
   color: var(--form-text);
   background-color: var(--main-100);
   border-radius: 0.5em;
   border: 2px solid var(--accent-300);
   transition: box-shadow 200ms ease, color 200ms ease;
 }
-fieldset input:focus, fieldset textarea:focus {
+.contact__form fieldset input:focus, .contact__form fieldset textarea:focus {
   color: black;
   border-color: var(--accent-400);
   box-shadow: 0 0 0 3px var(--accent-200);
