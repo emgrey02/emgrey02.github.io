@@ -1210,11 +1210,42 @@ input[type=submit] {
 }
 
 .sm-links {
+  width: 100%;
+}
+.sm-links ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: max(60%, 20rem);
+  flex-wrap: wrap;
+  width: max(60%, 300px);
   gap: 1rem;
   margin-inline: auto;
-  padding: clamp(1rem, 0.92rem + 0.39vw, 1.25rem);
+  margin-block: clamp(3rem, 2.77rem + 1.17vw, 3.75rem);
+  padding: clamp(0.5rem, 0.46rem + 0.19vw, 0.63rem);
+}
+.sm-links__link {
+  width: auto;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+}
+.sm-links a {
+  width: auto;
+  height: auto;
+}
+.sm-links a:focus {
+  box-shadow: none;
+}
+.sm-links a:focus img {
+  box-shadow: 0 0 0 2px var(--focus-color);
+}
+.sm-links a img {
+  width: 40px;
+  height: 40px;
+  transition: box-shadow 200ms;
+}
+.sm-links a::before {
+  content: "";
+  width: 0;
+  height: 0;
 }/*# sourceMappingURL=main.css.map */
