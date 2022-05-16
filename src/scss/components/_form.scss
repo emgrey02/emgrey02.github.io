@@ -7,7 +7,7 @@
   padding: 2em 1em;
 
   & input+label {
-    margin-block-start: 1em;
+    margin-block-start: $space-s;
   }
 
   & input,
@@ -28,7 +28,8 @@
   }
 }
 
-form>input {
+//submit button //
+form>input[type=submit] {
   border-radius: 2rem;
   border: none;
   padding: .7em 4em .5em;
@@ -46,8 +47,4 @@ form>input {
     outline: none;
     box-shadow: 0 0 0 4px var(--focus-color);
   }
-}
-
-input[type=submit] {
-  transition: color 200ms, background-color 200ms, box-shadow 200ms;
 }

@@ -21,7 +21,7 @@ const observer = new IntersectionObserver(
 		});
 	},
 	{
-		threshold: 0.5,
+		threshold: 0.2,
 	}
 );
 
@@ -47,6 +47,35 @@ radio.forEach((option) => {
 		body.classList = '';
 		if (option.checked) {
 			body.classList.add(option.value);
+			localStorage.setItem('theme', option.value);
 		}
 	});
 });
+
+const getColorPreference = () => {
+	if (localStorage.getItem('theme')) {
+		return localStorage.getItem('theme');
+	} else {
+		return 'system';
+	}
+};
+
+const reflectPreference = () => {
+	body.classList = `${theme.value}`;
+
+	radio.forEach((option) => {
+		if (option.value === theme.value) {
+			option.checked = true;
+		}
+	});
+};
+
+const theme = {
+	value: getColorPreference(),
+};
+
+reflectPreference();
+
+window.onload = () => {
+	reflectPreference();
+};
