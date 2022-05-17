@@ -3,6 +3,7 @@
 a {
   color: inherit;
   position: relative;
+  transition: box-shadow 200ms;
 
   /* underline */
   &:before {
