@@ -13,7 +13,7 @@ a {
     background-color: var(--accent-400);
     position: absolute;
     inset-inline-end: 0;
-    inset-block-end: 0;
+    inset-block-end: .2em;
     transition: all 300ms ease;
   }
 
