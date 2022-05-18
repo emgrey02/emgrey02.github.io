@@ -518,7 +518,7 @@ h1 {
   font-size: clamp(2.07rem, 1.17rem + 4.54vw, 5rem);
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.215em;
+  letter-spacing: clamp(0.25rem, 0.23rem + 0.1vw, 0.31rem);
 }
 
 h2 {
@@ -579,20 +579,21 @@ body {
 }
 .nav__container {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   padding-inline: 1em;
   align-items: center;
-}
-@media (min-width: 1000px) {
-  .nav__container {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-  }
 }
 .nav__icon {
   width: 4em;
   height: 3.5em;
-  margin-block: 0.5em;
+  margin-inline: 0.5em 1em;
+  order: 2;
+}
+@media (min-width: 355px) {
+  .nav__icon {
+    order: 0;
+  }
 }
 .nav__name {
   line-height: 0.8;
@@ -602,9 +603,9 @@ body {
 @media (min-width: 1000px) {
   .nav__name {
     text-align: start;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
   }
 }
 .nav__menu {
@@ -617,7 +618,7 @@ body {
 }
 @media (min-width: 1000px) {
   .nav__menu {
-    flex-basis: 50%;
+    flex-basis: 45%;
     padding-block: 0;
   }
 }
