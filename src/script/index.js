@@ -5,12 +5,14 @@ const radio = document.querySelectorAll('input[name="theme"]');
 const first = document.querySelector('.first');
 const second = document.querySelector('.second');
 const third = document.querySelector('.third');
+const fourth = document.querySelector('.fourth');
 
 const className = 'in-view';
 
 first.classList.remove(className);
 second.classList.remove(className);
 third.classList.remove(className);
+fourth.classList.remove(className);
 
 const observer = new IntersectionObserver(
 	(entries) => {
@@ -30,6 +32,7 @@ const observer = new IntersectionObserver(
 observer.observe(first);
 observer.observe(second);
 observer.observe(third);
+observer.observe(fourth);
 
 window.addEventListener('scroll', () => {
 	lines.forEach((line) => {

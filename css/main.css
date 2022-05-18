@@ -1210,6 +1210,13 @@ body {
           margin-inline-end: auto;
 }
 
+.more {
+  max-width: 60ch;
+  margin-inline: auto;
+  margin-block: clamp(5rem, 4.61rem + 1.94vw, 6.25rem);
+  padding: 0.5em;
+}
+
 .contact__form fieldset {
   border: none;
   background-color: var(--main-200);
