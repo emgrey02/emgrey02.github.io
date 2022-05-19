@@ -15,14 +15,14 @@
     margin-block-end: 1rem;
     padding-right: 100%;
     transform: translateX(-20%);
-    transition: background-color 500ms ease-out;
+    transition: background-color 200ms ease-out;
 
     &:last-child,
     &:nth-child(4) {
       background-color: var(--main-200);
       transform: translateX(-30%);
       animation-duration: 3.9s;
-      transition: background-color 500ms ease-out;
+      transition: background-color 200ms ease-out;
     }
 
     &:nth-child(2) {
@@ -67,10 +67,4 @@
 
 .moving {
   animation: glide 3.5s cubic-bezier(0.23, 0.36, 0.28, 0.83) 1;
-}
-
-@media (prefers-reduced-motion) {
-  .moving {
-    animation: none;
-  }
 }

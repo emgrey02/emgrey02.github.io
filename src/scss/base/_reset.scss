@@ -416,6 +416,16 @@ th {
 
 /* end godlike reset */
 
+@media (prefers-reduced-motion) {
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: .001ms !important;
+    animation-duration: .001ms !important;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 
