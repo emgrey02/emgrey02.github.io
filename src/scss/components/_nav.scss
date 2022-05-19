@@ -14,21 +14,18 @@
 
 	&__container {
 		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
 		padding-inline: 1em;
 		align-items: center;
+
+		@media (min-width: 1000px) {
+			width: fit-content;
+		}
 	}
 
 	&__icon {
 		width: 4em;
 		height: 3.5em;
-		margin-inline: .5em 1em;
-		order: 2;
-
-		@media (min-width: 355px) {
-			order: 0;
-		}
+		margin-block: .5em;
 	}
 
 	&__name {
@@ -38,7 +35,7 @@
 
 		@media (min-width: 1000px) {
 			text-align: start;
-			width: max-content;
+			width: fit-content;
 		}
 	}
 
@@ -51,7 +48,7 @@
 		flex-wrap: wrap;
 
 		@media (min-width: 1000px) {
-			flex-basis: 45%;
+			flex-basis: 50%;
 			padding-block: 0;
 		}
 

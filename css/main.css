@@ -518,7 +518,7 @@ h1 {
   font-size: clamp(2.07rem, 1.17rem + 4.54vw, 5rem);
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: clamp(0.25rem, 0.23rem + 0.1vw, 0.31rem);
+  letter-spacing: 0.215em;
 }
 
 h2 {
@@ -560,7 +560,7 @@ body {
   background-color: var(--main-100);
   font-family: "Khula", sans-serif;
   overflow-x: hidden;
-  transition: background-color 500ms ease-out, color 500ms ease-out;
+  transition: background-color 200ms, color 200ms;
 }
 
 .nav {
@@ -579,21 +579,20 @@ body {
 }
 .nav__container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   padding-inline: 1em;
   align-items: center;
+}
+@media (min-width: 1000px) {
+  .nav__container {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
 }
 .nav__icon {
   width: 4em;
   height: 3.5em;
-  margin-inline: 0.5em 1em;
-  order: 2;
-}
-@media (min-width: 355px) {
-  .nav__icon {
-    order: 0;
-  }
+  margin-block: 0.5em;
 }
 .nav__name {
   line-height: 0.8;
@@ -603,9 +602,9 @@ body {
 @media (min-width: 1000px) {
   .nav__name {
     text-align: start;
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
   }
 }
 .nav__menu {
@@ -618,7 +617,7 @@ body {
 }
 @media (min-width: 1000px) {
   .nav__menu {
-    flex-basis: 45%;
+    flex-basis: 50%;
     padding-block: 0;
   }
 }
@@ -646,7 +645,7 @@ body {
 .theme-toggle {
   position: absolute;
   inset-inline-end: 50%;
-  inset-block-start: 170px;
+  inset-block-start: 185px;
   transform: translateX(50%);
 }
 .theme-toggle fieldset {
@@ -662,15 +661,6 @@ body {
   border-color: var(--focus-color);
   transition: border-color 200ms;
 }
-.theme-toggle .current-setting {
-  position: absolute;
-  inset-inline-start: 5%;
-  inset-block-start: 30%;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  font-size: clamp(0.83rem, 0.82rem + 0.08vw, 0.88rem);
-}
 .theme-toggle label {
   position: relative;
   font-size: clamp(1rem, 0.92rem + 0.39vw, 1.25rem);
@@ -678,7 +668,7 @@ body {
 }
 .theme-toggle input {
   opacity: 0;
-  position: relative;
+  position: absolute;
 }
 .theme-toggle input:checked ~ label::after {
   content: "";
@@ -688,6 +678,7 @@ body {
   background-color: var(--accent-300);
   inset-block-start: -0.2em;
   inset-inline-start: -5%;
+  z-index: -1;
 }
 
 .moving-lines {
@@ -704,14 +695,12 @@ body {
           margin-block-end: 1rem;
   padding-right: 100%;
   transform: translateX(-20%);
-  transition: background-color 500ms ease-out;
 }
 .moving-lines__line:last-child, .moving-lines__line:nth-child(4) {
   background-color: var(--main-200);
   transform: translateX(-30%);
   -webkit-animation-duration: 3.9s;
           animation-duration: 3.9s;
-  transition: background-color 500ms ease-out;
 }
 .moving-lines__line:nth-child(2) {
   transform: translateX(-60%);
@@ -1218,13 +1207,6 @@ body {
 .project.left .project__words-cont--description {
   -webkit-margin-end: auto;
           margin-inline-end: auto;
-}
-
-.more {
-  max-width: 60ch;
-  margin-inline: auto;
-  margin-block: clamp(5rem, 4.61rem + 1.94vw, 6.25rem);
-  padding: 0.5em;
 }
 
 .contact__form fieldset {
