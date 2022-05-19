@@ -17,6 +17,21 @@ a {
     transition: all 300ms ease;
   }
 
+  & span::after {
+    content: "✔";
+    position: absolute;
+    transform: scale(.7);
+    inset-inline-start: -.6em;
+    inset-block-start: -.4em;
+    color: var(--main-100);
+  }
+
+  &:visited {
+    & span::after {
+      color: var(--accent-200);
+    }
+  }
+
   &:hover {
     text-decoration-color: var(--accent-300);
     color: var(--link-text);
@@ -31,6 +46,7 @@ a {
     outline: none;
     box-shadow: 0 0 0 2px var(--focus-color);
   }
+
 }
 
 a[class] {
