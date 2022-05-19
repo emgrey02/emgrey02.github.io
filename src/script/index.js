@@ -1,6 +1,7 @@
 const lines = document.querySelectorAll('.moving-lines__line');
 const body = document.querySelector('body');
 const radio = document.querySelectorAll('input[name="theme"]');
+const currentSetting = document.querySelector('.current-setting__name');
 
 const first = document.querySelector('.first');
 const second = document.querySelector('.second');
@@ -84,4 +85,20 @@ reflectPreference();
 
 window.onload = () => {
 	reflectPreference();
+	setCurrentSetting();
 };
+
+const setCurrentSetting = () => {
+	if (
+		window.matchMedia &&
+		window.matchMedia('(prefers-color-scheme: light)').matches
+	) {
+		currentSetting.textContent = 'light';
+	} else {
+		currentSetting.textContent = 'dark';
+	}
+};
+
+let forMatchChangeDetection = window.matchMedia('(prefers-color-scheme: dark)');
+
+forMatchChangeDetection.addEventListener('change', setCurrentSetting);

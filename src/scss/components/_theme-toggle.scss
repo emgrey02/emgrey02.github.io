@@ -3,7 +3,7 @@
 .theme-toggle {
   position: absolute;
   inset-inline-end: 50%;
-  inset-block-start: 185px;
+  inset-block-start: 170px;
   transform: translateX(50%);
 
   fieldset {
@@ -19,6 +19,15 @@
       border-color: var(--focus-color);
       transition: border-color 200ms;
     }
+
+  }
+
+  .current-setting {
+    position: absolute;
+    inset-inline-start: 5%;
+    inset-block-start: 30%;
+    width: max-content;
+    font-size: $step--1;
   }
 
   & label {
@@ -29,10 +38,8 @@
 
   & input {
     opacity: 0;
-    position: absolute;
+    position: relative;
   }
-
-
 
   input:checked~label::after {
     content: '';
@@ -42,7 +49,5 @@
     background-color: var(--accent-300);
     inset-block-start: -.2em;
     inset-inline-start: -5%;
-    z-index: -1;
-
   }
 }

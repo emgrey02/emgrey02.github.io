@@ -560,7 +560,7 @@ body {
   background-color: var(--main-100);
   font-family: "Khula", sans-serif;
   overflow-x: hidden;
-  transition: background-color 200ms, color 200ms;
+  transition: background-color 500ms ease-out, color 500ms ease-out;
 }
 
 .nav {
@@ -646,7 +646,7 @@ body {
 .theme-toggle {
   position: absolute;
   inset-inline-end: 50%;
-  inset-block-start: 185px;
+  inset-block-start: 170px;
   transform: translateX(50%);
 }
 .theme-toggle fieldset {
@@ -662,6 +662,15 @@ body {
   border-color: var(--focus-color);
   transition: border-color 200ms;
 }
+.theme-toggle .current-setting {
+  position: absolute;
+  inset-inline-start: 5%;
+  inset-block-start: 30%;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-size: clamp(0.83rem, 0.82rem + 0.08vw, 0.88rem);
+}
 .theme-toggle label {
   position: relative;
   font-size: clamp(1rem, 0.92rem + 0.39vw, 1.25rem);
@@ -669,7 +678,7 @@ body {
 }
 .theme-toggle input {
   opacity: 0;
-  position: absolute;
+  position: relative;
 }
 .theme-toggle input:checked ~ label::after {
   content: "";
@@ -679,7 +688,6 @@ body {
   background-color: var(--accent-300);
   inset-block-start: -0.2em;
   inset-inline-start: -5%;
-  z-index: -1;
 }
 
 .moving-lines {
@@ -696,12 +704,14 @@ body {
           margin-block-end: 1rem;
   padding-right: 100%;
   transform: translateX(-20%);
+  transition: background-color 500ms ease-out;
 }
 .moving-lines__line:last-child, .moving-lines__line:nth-child(4) {
   background-color: var(--main-200);
   transform: translateX(-30%);
   -webkit-animation-duration: 3.9s;
           animation-duration: 3.9s;
+  transition: background-color 500ms ease-out;
 }
 .moving-lines__line:nth-child(2) {
   transform: translateX(-60%);
