@@ -15,12 +15,14 @@
     margin-block-end: 1rem;
     padding-right: 100%;
     transform: translateX(-20%);
+    transition: background-color 500ms ease-out;
 
     &:last-child,
     &:nth-child(4) {
       background-color: var(--main-200);
       transform: translateX(-30%);
       animation-duration: 3.9s;
+      transition: background-color 500ms ease-out;
     }
 
     &:nth-child(2) {
