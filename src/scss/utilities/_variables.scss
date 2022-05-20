@@ -15,6 +15,8 @@
   --h2-color-light: var(--body-text-light);
   --form-text-light: var(--body-text-light);
   --button-text-light: var(--body-text-light);
+  --hair-first-light: hsl(15, 86%, 55%);
+  --hair-second-light: hsl(0, 81%, 21%);
 
   --main-400-dark: hsl(240, 13%, 55%);
   --main-300-dark: hsl(240, 13%, 45%);
@@ -31,6 +33,8 @@
   --h2-color-dark: #2c2c2c;
   --form-text-dark: white;
   --button-text-dark: black;
+  --hair-first-dark: rgb(136, 75, 123);
+  --hair-second-dark: rgb(54, 8, 72);
 
 }
 
@@ -50,6 +54,8 @@ body.light {
   --h2-color: var(--h2-color-light);
   --form-text: var(--form-text-light);
   --button-text: var(--button-text-light);
+  --hair-first: var(--hair-first-light);
+  --hair-second: var(--hair-second-light);
 }
 
 body.dark {
@@ -68,6 +74,8 @@ body.dark {
   --h2-color: var(--h2-color-dark);
   --form-text: var(--form-text-dark);
   --button-text: var(--button-text-dark);
+  --hair-first: var(--hair-first-dark);
+  --hair-second: var(--hair-second-dark);
 }
 
 body.system {
@@ -86,6 +94,8 @@ body.system {
   --h2-color: var(--h2-color-light);
   --form-text: var(--form-text-light);
   --button-text: var(--button-text-light);
+  --hair-first: var(--hair-first-light);
+  --hair-second: var(--hair-second-light);
 
   @media (prefers-color-scheme: dark) {
     --main-400: var(--main-400-dark);
@@ -103,6 +113,9 @@ body.system {
     --h2-color: var(--h2-color-dark);
     --form-text: var(--form-text-dark);
     --button-text: var(--button-text-dark);
+    --hair-first: var(--hair-first-dark);
+    --hair-second: var(--hair-second-dark);
+
   }
 }
 
