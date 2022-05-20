@@ -7,5 +7,10 @@ body {
   background-color: var(--main-100);
   font-family: type.$font;
   overflow-x: hidden;
-  transition: background-color 200ms ease-out, color 200ms ease-out;
+}
+
+header,
+main,
+footer {
+  transition: opacity 200ms 200ms;
 }

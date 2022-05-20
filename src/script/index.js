@@ -2,6 +2,25 @@ const lines = document.querySelectorAll('.moving-lines__line');
 const body = document.querySelector('body');
 const radio = document.querySelectorAll('input[name="theme"]');
 const currentSetting = document.querySelector('.current-setting__name');
+const header = document.querySelector('header');
+const main = document.querySelector('main');
+const footer = document.querySelector('footer');
+const loader = document.querySelector('#loader');
+const emma = document.querySelector('.about__image');
+
+let loadtime;
+
+//loader //
+window.addEventListener('load', () => {
+	loadtime = setTimeout(showPage, 2000);
+});
+
+function showPage() {
+	loader.style.display = 'none';
+	header.style.opacity = '1';
+	main.style.opacity = '1';
+	footer.style.opacity = '1';
+}
 
 //moving eyes :) //
 const rightEye = document.querySelector('#right-iris');
@@ -19,7 +38,7 @@ const rightCenterX = rightEyeArea.left + radius;
 const leftCenterY = leftEyeArea.top + radius;
 const rightCenterY = rightEyeArea.top + radius;
 
-document.addEventListener('mousemove', (e) => {
+emma.addEventListener('mousemove', (e) => {
 	let leftx = e.clientX - leftCenterX;
 	let rightx = e.clientX - rightCenterX;
 	let lefty = e.clientY - leftCenterY;

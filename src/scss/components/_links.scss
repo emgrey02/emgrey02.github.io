@@ -52,7 +52,7 @@ a {
 a[class] {
   text-decoration: none;
   position: relative;
-  width: fit-content;
+  // width: fit-content;
 
   &::after {
     content: '';

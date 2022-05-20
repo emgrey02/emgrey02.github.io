@@ -514,9 +514,6 @@ a:focus {
 a[class] {
   text-decoration: none;
   position: relative;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
 }
 a[class]::after {
   content: "";
@@ -593,9 +590,46 @@ body {
   background-color: var(--main-100);
   font-family: "Khula", sans-serif;
   overflow-x: hidden;
-  transition: background-color 200ms ease-out, color 200ms ease-out;
 }
 
+header,
+main,
+footer {
+  transition: opacity 200ms 200ms;
+}
+
+#loader {
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  border: 16px solid hsl(235deg, 56%, 84%);
+  border-radius: 50%;
+  border-top: 16px solid hsl(32deg, 100%, 66%);
+  -webkit-animation: spin 1.5s ease-in-out infinite;
+  animation: spin 1.5s ease-in-out infinite;
+  transition: opacity 200ms;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .nav {
   width: 100%;
   height: 200px;
@@ -706,6 +740,7 @@ body {
 }
 .theme-toggle .current-setting span {
   text-transform: uppercase;
+  font-weight: 900;
 }
 .theme-toggle label {
   position: relative;
@@ -740,14 +775,12 @@ body {
           margin-block-end: 1rem;
   padding-right: 100%;
   transform: translateX(-20%);
-  transition: background-color 200ms ease-out;
 }
 .moving-lines__line:last-child, .moving-lines__line:nth-child(4) {
   background-color: var(--main-200);
   transform: translateX(-30%);
   -webkit-animation-duration: 3.9s;
           animation-duration: 3.9s;
-  transition: background-color 200ms ease-out;
 }
 .moving-lines__line:nth-child(2) {
   transform: translateX(-60%);
@@ -869,6 +902,12 @@ body {
   max-width: 65ch;
   -webkit-margin-before: clamp(0.5rem, 0.46rem + 0.19vw, 0.63rem);
           margin-block-start: clamp(0.5rem, 0.46rem + 0.19vw, 0.63rem);
+}
+@media (min-width: 1100px) {
+  .about__container--para {
+    -webkit-padding-end: 0.5em;
+            padding-inline-end: 0.5em;
+  }
 }
 
 .projects {

@@ -70,6 +70,10 @@
     &--para {
       max-width: 65ch;
       margin-block-start: $space-2xs;
+
+      @media (min-width: 1100px) {
+        padding-inline-end: .5em;
+      }
     }
   }
 }

@@ -10,13 +10,15 @@
   <link rel="shortcut icon" href="src/assets/iconsquid.png" type="image/x-icon">
 
   <link rel="stylesheet" href="css/main.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
   <script src="src/script/index.js" defer></script>
 </head>
 
+
 <body>
 
-  <header>
+  <div id="loader"></div>
+
+  <header style="opacity: 0;">
     <nav class="nav">
       <div class="nav__container">
         <svg class="nav__icon">
@@ -75,23 +77,12 @@
     </div>
   </header>
 
-  <main>
+  <main style="opacity: 0;">
     <section class="about" id="about">
       <h2 class="about__title">About Me</h2>
       <svg class="about__image" width="588" height="428" viewBox="0 0 588 428" fill="none"
         xmlns="http://www.w3.org/2000/svg">
         <title>Emma's face staring off to the right</title>
-        <style>
-          #left-pupil,
-          #right-pupil {
-            position: relative;
-          }
-
-          #left-iris,
-          #right-iris {
-            transform-box: fill-box;
-          }
-        </style>
         <g id="emma-cartoon">
           <rect id="chest" x="118" y="290" width="244" height="116" fill="#B87359" />
           <path id="neck" d="M163 208L307 201C281 222.5 311 294 311 294L170.5 297C170.5 297 191.5 289 163 208Z"
@@ -414,7 +405,7 @@
     </svg>
   </main>
 
-  <footer class="footer">
+  <footer class="footer" style="opacity: 0;">
     <h3 class="footer__contact-title">connect</h3>
     <div class="sm-links">
       <ul>
