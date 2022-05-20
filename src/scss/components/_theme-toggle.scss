@@ -1,10 +1,8 @@
 @use '../utilities/variables' as *;
 
 .theme-toggle {
-  position: absolute;
-  inset-inline-end: 50%;
-  inset-block-start: 170px;
-  transform: translateX(50%);
+  position: relative;
+
 
   fieldset {
     display: flex;
@@ -14,20 +12,24 @@
     border: 2px solid var(--main-300);
     border-radius: .2em;
     transition: border 200ms;
+    margin-inline: auto;
+    width: fit-content;
 
     &:focus-within {
       border-color: var(--focus-color);
       transition: border-color 200ms;
     }
-
   }
 
   .current-setting {
-    position: absolute;
-    inset-inline-start: 5%;
-    inset-block-start: 30%;
+    position: relative;
+    margin-inline: auto;
     width: max-content;
     font-size: $step--1;
+
+    & span {
+      text-transform: uppercase;
+    }
   }
 
   & label {
@@ -38,7 +40,7 @@
 
   & input {
     opacity: 0;
-    position: relative;
+    position: absolute;
   }
 
   input:checked~label::after {

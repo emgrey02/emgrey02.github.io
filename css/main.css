@@ -677,10 +677,7 @@ body {
 }
 
 .theme-toggle {
-  position: absolute;
-  inset-inline-end: 50%;
-  inset-block-start: 170px;
-  transform: translateX(50%);
+  position: relative;
 }
 .theme-toggle fieldset {
   display: flex;
@@ -690,19 +687,25 @@ body {
   border: 2px solid var(--main-300);
   border-radius: 0.2em;
   transition: border 200ms;
+  margin-inline: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .theme-toggle fieldset:focus-within {
   border-color: var(--focus-color);
   transition: border-color 200ms;
 }
 .theme-toggle .current-setting {
-  position: absolute;
-  inset-inline-start: 5%;
-  inset-block-start: 30%;
+  position: relative;
+  margin-inline: auto;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   font-size: clamp(0.83rem, 0.82rem + 0.08vw, 0.88rem);
+}
+.theme-toggle .current-setting span {
+  text-transform: uppercase;
 }
 .theme-toggle label {
   position: relative;
@@ -711,7 +714,7 @@ body {
 }
 .theme-toggle input {
   opacity: 0;
-  position: relative;
+  position: absolute;
 }
 .theme-toggle input:checked ~ label::after {
   content: "";
