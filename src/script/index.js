@@ -3,6 +3,7 @@ const body = document.querySelector('body');
 const radio = document.querySelectorAll('input[name="theme"]');
 const currentSetting = document.querySelector('.current-setting__name');
 
+//moving eyes :) //
 const rightEye = document.querySelector('#right-iris');
 const leftEye = document.querySelector('#left-iris');
 const leftPupil = document.querySelector('#left-pupil');
@@ -17,11 +18,6 @@ const leftCenterX = leftEyeArea.left + radius;
 const rightCenterX = rightEyeArea.left + radius;
 const leftCenterY = leftEyeArea.top + radius;
 const rightCenterY = rightEyeArea.top + radius;
-
-const first = document.querySelector('.first');
-const second = document.querySelector('.second');
-const third = document.querySelector('.third');
-const fourth = document.querySelector('.fourth');
 
 document.addEventListener('mousemove', (e) => {
 	let leftx = e.clientX - leftCenterX;
@@ -42,6 +38,12 @@ document.addEventListener('mousemove', (e) => {
 		2 + 'px'
 	}) `;
 });
+
+// project animation on scroll //
+const first = document.querySelector('.first');
+const second = document.querySelector('.second');
+const third = document.querySelector('.third');
+const fourth = document.querySelector('.fourth');
 
 const className = 'in-view';
 
