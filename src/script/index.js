@@ -2,24 +2,21 @@ const lines = document.querySelectorAll('.moving-lines__line');
 const body = document.querySelector('body');
 const radio = document.querySelectorAll('input[name="theme"]');
 const currentSetting = document.querySelector('.current-setting__name');
-const emma = document.querySelector('#emma-cartoon');
 
-const rightPupil = document.querySelector('#right-pupil');
+const rightEye = document.querySelector('#right-iris');
+const leftEye = document.querySelector('#left-iris');
 const leftPupil = document.querySelector('#left-pupil');
+const rightPupil = document.querySelector('#right-pupil');
 
-const maxTrans = 10;
-const maxXDist = innerWidth / 2;
-const maxYDist = innerHeight / 2;
+const leftEyeArea = leftEye.getBoundingClientRect();
+const rightEyeArea = rightEye.getBoundingClientRect();
 
-const leftPupilArea = leftPupil.getBoundingClientRect();
-const rightPupilArea = rightPupil.getBoundingClientRect();
+const radius = leftEyeArea.width / 2;
 
-const radius = leftPupilArea.width / 2;
-
-const leftCenterX = leftPupilArea.left + radius;
-const rightCenterX = rightPupilArea.left + radius;
-const leftCenterY = leftPupilArea.top + radius;
-const rightCenterY = rightPupilArea.top + radius;
+const leftCenterX = leftEyeArea.left + radius;
+const rightCenterX = rightEyeArea.left + radius;
+const leftCenterY = leftEyeArea.top + radius;
+const rightCenterY = rightEyeArea.top + radius;
 
 const first = document.querySelector('.first');
 const second = document.querySelector('.second');
@@ -35,18 +32,15 @@ document.addEventListener('mousemove', (e) => {
 	let leftTheta = Math.atan2(lefty, leftx);
 	let rightTheta = Math.atan2(righty, rightx);
 
-	let leftAngle = (leftTheta * 180) / Math.PI + 180;
-	let rightAngle = (rightTheta * 180) / Math.PI + 180;
+	let leftAngle = (leftTheta * 180) / Math.PI + 360;
+	let rightAngle = (rightTheta * 180) / Math.PI + 360;
 
-	leftPupil.style.transformOrigin = `center center`;
-	leftPupil.style.transform = `translateX(${radius + 'px'}) rotate(${
-		leftAngle + 'deg'
+	leftPupil.style.transform = ` rotate(${leftAngle + 'deg'}) translateX(${
+		2 + 'px'
 	})`;
-
-	rightPupil.style.transform = `translateX(${radius + 'px'}) rotate(${
-		rightAngle + 'deg'
-	})`;
-	rightPupil.style.transformOrigin = `center center`;
+	rightPupil.style.transform = `rotate(${rightAngle + 'deg'}) translateX(${
+		2 + 'px'
+	}) `;
 });
 
 const className = 'in-view';
