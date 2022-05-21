@@ -38,7 +38,7 @@ const rightCenterX = rightEyeArea.left + radius;
 const leftCenterY = leftEyeArea.top + radius;
 const rightCenterY = rightEyeArea.top + radius;
 
-emma.addEventListener('mousemove', (e) => {
+body.addEventListener('mousemove', (e) => {
 	let leftx = e.clientX - leftCenterX;
 	let rightx = e.clientX - rightCenterX;
 	let lefty = e.clientY - leftCenterY;

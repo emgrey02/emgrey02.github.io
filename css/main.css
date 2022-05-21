@@ -600,8 +600,7 @@ footer {
 
 #loader {
   position: fixed;
-  top: 50vh;
-  left: 50vw;
+  display: flex;
   z-index: 1;
   width: 120px;
   height: 120px;
