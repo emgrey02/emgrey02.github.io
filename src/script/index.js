@@ -8,20 +8,6 @@ const footer = document.querySelector('footer');
 const loader = document.querySelector('#loader');
 const emma = document.querySelector('.about__image');
 
-let loadtime;
-
-//loader //
-window.addEventListener('load', () => {
-	loadtime = setTimeout(showPage, 2000);
-});
-
-function showPage() {
-	loader.style.display = 'none';
-	header.style.opacity = '1';
-	main.style.opacity = '1';
-	footer.style.opacity = '1';
-}
-
 //moving eyes :) //
 const rightEye = document.querySelector('#right-iris');
 const leftEye = document.querySelector('#left-iris');
