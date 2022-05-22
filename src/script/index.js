@@ -77,8 +77,8 @@ observer.observe(second);
 observer.observe(third);
 observer.observe(fourth);
 
-window.addEventListener('scroll', () => {
-	lines.forEach((line) => {
+lines.forEach((line) => {
+	line.addEventListener('mouseenter', () => {
 		line.classList.add('moving');
 	});
 });
