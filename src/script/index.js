@@ -24,25 +24,27 @@ const rightCenterX = rightEyeArea.left + radius;
 const leftCenterY = leftEyeArea.top + radius;
 const rightCenterY = rightEyeArea.top + radius;
 
-body.addEventListener('mousemove', (e) => {
-	let leftx = e.clientX - leftCenterX;
-	let rightx = e.clientX - rightCenterX;
-	let lefty = e.clientY - leftCenterY;
-	let righty = e.clientY - rightCenterY;
+if (window.matchMedia('(prefers-reduced-motion: no-preference )')) {
+	body.addEventListener('mousemove', (e) => {
+		let leftx = e.clientX - leftCenterX;
+		let rightx = e.clientX - rightCenterX;
+		let lefty = e.clientY - leftCenterY;
+		let righty = e.clientY - rightCenterY;
 
-	let leftTheta = Math.atan2(lefty, leftx);
-	let rightTheta = Math.atan2(righty, rightx);
+		let leftTheta = Math.atan2(lefty, leftx);
+		let rightTheta = Math.atan2(righty, rightx);
 
-	let leftAngle = (leftTheta * 180) / Math.PI + 360;
-	let rightAngle = (rightTheta * 180) / Math.PI + 360;
+		let leftAngle = (leftTheta * 180) / Math.PI + 360;
+		let rightAngle = (rightTheta * 180) / Math.PI + 360;
 
-	leftPupil.style.transform = ` rotate(${leftAngle + 'deg'}) translateX(${
-		2 + 'px'
-	})`;
-	rightPupil.style.transform = `rotate(${rightAngle + 'deg'}) translateX(${
-		2 + 'px'
-	}) `;
-});
+		leftPupil.style.transform = ` rotate(${leftAngle + 'deg'}) translateX(${
+			2 + 'px'
+		})`;
+		rightPupil.style.transform = `rotate(${rightAngle + 'deg'}) translateX(${
+			2 + 'px'
+		}) `;
+	});
+}
 
 // project animation on scroll //
 const first = document.querySelector('.first');
@@ -90,7 +92,6 @@ lines.forEach((line) => {
 });
 
 //theme toggle//
-
 radio.forEach((option) => {
 	option.addEventListener('change', () => {
 		body.classList = '';
@@ -128,6 +129,12 @@ reflectPreference();
 window.onload = () => {
 	reflectPreference();
 	setCurrentSetting();
+
+	//add transition after page loads so there isn't a transition when it loads //
+	body.style.transition = 'color 200ms ease, background-color 200ms ease';
+	lines.forEach((line) => {
+		line.style.transition = 'background-color 200ms ease';
+	});
 };
 
 const setCurrentSetting = () => {

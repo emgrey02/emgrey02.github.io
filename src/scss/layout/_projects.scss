@@ -26,31 +26,39 @@
   }
 
   .project.right {
-    opacity: 0;
     transform: translateX(50px);
-    transition: opacity 500ms, transform 700ms $ease-elastic-5;
+    transition: transform 500ms $ease-elastic-5;
 
     &.in-view {
-      opacity: 1;
       transform: translateX(0);
     }
+
+    @media (prefers-reduced-motion) {
+      transform: none;
+    }
+
   }
 
   .project.left {
-    opacity: 0;
     transform: translateX(-50px);
-    transition: opacity 500ms, transform 700ms $ease-elastic-5;
+    transition: transform 500ms $ease-elastic-5;
 
     &.in-view {
-      opacity: 1;
       transform: translateX(0);
+    }
+
+    @media (prefers-reduced-motion) {
+      transform: none;
+    }
+
+    .project__image-cont--platter {
+      inset-inline-start: -10%;
     }
   }
 }
 
 
 .project {
-  opacity: 0;
   padding-block: $space-s;
 
   &__image-cont {
@@ -65,7 +73,7 @@
     &--platter {
       position: absolute;
       height: 18rem;
-      width: 100%;
+      width: 110%;
       inset-block-start: calc(50% - 9rem);
       inset-inline-start: 0;
       background-color: var(--main-200);

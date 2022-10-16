@@ -559,6 +559,7 @@ a[class]:hover::after {
 }
 a[class]:hover {
   color: black;
+  cursor: url("../src/assets/pointer.svg"), pointer;
 }
 
 @font-face {
@@ -611,12 +612,7 @@ body {
   color: var(--body-text);
   background-color: var(--main-100);
   font-family: "Khula", sans-serif;
-}
-
-header,
-main,
-footer {
-  transition: opacity 200ms 200ms;
+  cursor: url("../src/assets/default.svg"), auto;
 }
 
 .nav {
@@ -735,6 +731,7 @@ footer {
   position: relative;
   font-size: clamp(1rem, 0.92rem + 0.39vw, 1.25rem);
   text-transform: uppercase;
+  cursor: url("../src/assets/pointer.svg"), pointer;
 }
 .theme-toggle input {
   opacity: 0;
@@ -752,7 +749,8 @@ footer {
 
 .moving-lines {
   width: 100%;
-  margin-block: 5rem;
+  -webkit-margin-before: 5rem;
+          margin-block-start: 5rem;
 }
 .moving-lines__line {
   background-color: var(--main-300);
@@ -925,26 +923,34 @@ footer {
   z-index: -1;
 }
 .projects .project.right {
-  opacity: 0;
   transform: translateX(50px);
-  transition: opacity 500ms, transform 700ms cubic-bezier(0.5, 1.75, 0.75, 1.25);
+  transition: transform 500ms cubic-bezier(0.5, 1.75, 0.75, 1.25);
 }
 .projects .project.right.in-view {
-  opacity: 1;
   transform: translateX(0);
+}
+@media (prefers-reduced-motion) {
+  .projects .project.right {
+    transform: none;
+  }
 }
 .projects .project.left {
-  opacity: 0;
   transform: translateX(-50px);
-  transition: opacity 500ms, transform 700ms cubic-bezier(0.5, 1.75, 0.75, 1.25);
+  transition: transform 500ms cubic-bezier(0.5, 1.75, 0.75, 1.25);
 }
 .projects .project.left.in-view {
-  opacity: 1;
   transform: translateX(0);
+}
+@media (prefers-reduced-motion) {
+  .projects .project.left {
+    transform: none;
+  }
+}
+.projects .project.left .project__image-cont--platter {
+  inset-inline-start: -10%;
 }
 
 .project {
-  opacity: 0;
   padding-block: clamp(1rem, 0.92rem + 0.39vw, 1.25rem);
 }
 .project__image-cont {
@@ -961,7 +967,7 @@ footer {
 .project__image-cont--platter {
   position: absolute;
   height: 18rem;
-  width: 100%;
+  width: 110%;
   inset-block-start: calc(50% - 9rem);
   inset-inline-start: 0;
   background-color: var(--main-200);

@@ -36,6 +36,7 @@
     position: relative;
     font-size: $step-0;
     text-transform: uppercase;
+    cursor: url('../src/assets/pointer.svg'), pointer;
   }
 
   & input {

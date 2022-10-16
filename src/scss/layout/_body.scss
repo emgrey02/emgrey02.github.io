@@ -7,9 +7,3 @@ body {
   background-color: var(--main-100);
   font-family: type.$font;
 }
-
-header,
-main,
-footer {
-  transition: opacity 200ms 200ms;
-}
